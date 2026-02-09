@@ -1,0 +1,147 @@
+so there are few question 
+
+
+app.jsx 
+
+there is mainly two section
+one is sidebar and other is menu 
+so how it will be handled in app.jsx 
+and how menu will be handled
+
+
+so Flow is like 
+01.
+you when there  is no project 
+then in that ccase you can start by two way 
+either ty clickin on + addproject in sidebar
+or create new Project in menu bar 
+
+02. 
+afte that enter title, description, and due date for particular project 
+and there will be cancel and save button for obvious reason 
+
+03. after addition of project 
+
+initially it wil show project name (title), desccrition, and due date 
+in order 
+title  delete button -> to delete teh project
+due date 
+desccrition
+
+
+[Tasks]
+
+input field  Add Task [button]
+
+------------------
+Now when you click on add task butotn 
+it willbe added into subarray and will be showing 
+below the input field 
+
+two case : 
+what if there is no task 
+no issue 
+what if there is many task 
+in that case we have to also delete also the master array as well as subarray 
+
+
+
+-----------------
+so what we are doing here is that 
+fist we will style the cancle and save button and other input field 
+
+afater that
+think of a case when there is no project 
+then there be one fallback condition 
+in that case we need to show the ui to create a new project 
+
+but then button should be same with button-text different 
+
+so for htat only we will defining one new component 
+with name Button and props will be children and let suppose in future there is any props associated that we will alo pass 
+props can be anything some text, some number some function 
+so when we will be passing that 
+
+we can put it with Button or child component 
+
+
+props -> value , function 
+
+so that thing is
+how to import image 
+import any_naem from "location"
+<img src = {}/>
+---------------------
+so now our main goal is that 
+we need to render required component conditionally 
+
+so what we can do here is that 
+
+
+there are few more things 
+as I was thinking that 
+all projects will be stored in an array that is correct 
+but the things is that 
+array will be a part of object
+
+data will be stored on App.jsx file 
+
+why?
+because that is the main compoent 
+when all Parent componet is there 
+and easy to use all data 
+from there only 
+otherwise need to use elevate state 
+
+
+
+
+and also there will be three status 
+undefined -> we are not adding any project
+null -> we will be adding new project
+or sth -> we have alredy added some project 
+
+
+so on screen 
+which compoent to render 
+
+intially both NewProject and No ProjectSelected 
+
+
+NoProjectSelected defaulte UI Screen at beg 
+with button to add new project 
+
+
+NewProject -> part of sidebar that will be helping in adding new Project 
+
+
+so the flow is sth like 
+in beg 
+NewProject and NoProjectSelected will be shown 
+and once one project is added then there is no use of NoProjectSelected 
+
+then NewProject will be there 
+
+projectState is the most import thing 
+it will store two things 
+01. status 
+02. all added project 
+
+
+handleStartAddProject() will be use to change the state and set the value of projectState
+it will trigger in only two case 
+one from NoProjectSelected and NewProject
+
+const [projectState,setProjectState] = useState({
+    selectProjectId : undefined, 
+    projects : []
+});
+
+function handleStartAddProject()
+{
+   setProjectState((prevState) => ({...prevState, selectProjectId : null}))
+}
+
+undefined	App just loaded, nothing selected -> NoProjectSelected
+null	User clicked Add Project -> NewProject
+

@@ -1,0 +1,8 @@
+So here in the section, we will be understaning the prop drilling 
+issue and its solution 
+
+framework: 
+
+app -> shop -> product 
+app -> header -> cartModal -> cart 
+
