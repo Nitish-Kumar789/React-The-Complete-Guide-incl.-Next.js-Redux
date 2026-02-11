@@ -1,0 +1,30 @@
+there are few things that should be noted
+that when we are creating the context, its always a good practice to keep a dummy sample 
+so that it will give autosuggestoin 
+
+and second things where we are wrapping the context 
+at that place also, need to add like value 
+
+
+Generally Hooks are not used inside 
+if block and for loop 
+
+but since in context, since we are using it some place 
+so for that purpose, we can use "use" or "usecontext" 
+
+use is more flexible and can be used inside conditional statement 
+
+-> const cartCtx = use(CartContext)
+-> const {items} = use(CartContext)
+
+
+
+Export Type	    Import Syntax
+export const	import { Name }
+export default	import any name 
+
+so with default we get freedom of name 
+
+but with export const since we are not usign default so in that case 
+
+we have to take same name while importing in curly braces 
