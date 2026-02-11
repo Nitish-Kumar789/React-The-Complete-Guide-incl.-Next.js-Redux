@@ -1,0 +1,27 @@
+1. Prop Drilling (React)
+
+Prop drilling happens when you pass data from a parent component to a deeply nested child component through multiple intermediate components — even if those middle components don’t use the data.
+
+
+| Prop Drilling                    | Component Composition          |
+| -------------------------------- | ------------------------------ |
+| Passing data through many levels | Passing components as children |
+| Makes code tightly connected     | Makes code reusable & flexible |
+| Hard to maintain in large apps   | Cleaner structure              |
+
+
+so in prop driling we are passing the data via various layer 
+that is un-necessary so what we can do here
+we have two solution
+01. component composition 
+- basically we write the whole logic in app.jsx file mostly and pass that things as children componet 
+
+and thats the downside also reason being, app.jsx may be bloated with lots of code 
+
+
+--------------
+In second video 
+what we did, basically we shifted the code from shop.jsx to app.jsx 
+and pass all contents as children to shop.jsx 
+
+so basically we are making shop.jsx as wrapper class 
