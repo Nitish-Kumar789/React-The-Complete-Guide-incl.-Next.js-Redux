@@ -24,4 +24,5 @@ In second video
 what we did, basically we shifted the code from shop.jsx to app.jsx 
 and pass all contents as children to shop.jsx 
 
+
 so basically we are making shop.jsx as wrapper class 

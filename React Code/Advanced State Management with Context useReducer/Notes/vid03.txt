@@ -1,0 +1,77 @@
+Context API (React)
+
+Context API is a React feature that lets you share data across components without prop drilling.
+
+It allows you to pass data directly to deeply nested components.
+
+🎯 Why We Need It?
+
+Imagine this structure:
+
+App → Dashboard → Sidebar → Profile
+
+
+If Profile needs user data from App, normally you pass props through all levels.
+
+With Context API, Profile can access data directly — no need to pass through Dashboard and Sidebar.
+
+🧠 Real-Life Example
+
+Think of Context like WiFi 📶
+
+You don’t need wires from one room to another.
+All devices connect directly to the WiFi router.
+
+Similarly:
+
+Context = Router
+
+Components = Devices
+
+🛠️ How It Works (3 Steps)
+1️⃣ Create Context
+import { createContext } from "react";
+
+const UserContext = createContext();
+
+2️⃣ Provide Context
+
+Wrap components with Provider
+
+<UserContext.Provider value={{ name: "Nitish" }}>
+  <App />
+</UserContext.Provider>
+
+3️⃣ Consume Context
+import { useContext } from "react";
+
+const data = useContext(UserContext);
+
+console.log(data.name);
+
+
+Now any component inside Provider can access name.
+
+🔥 When to Use Context API?
+
+Use it for:
+
+Logged-in user info
+
+Theme (dark/light mode)
+
+Language settings
+
+Global app settings
+
+🚫 When NOT to Use
+
+For frequently changing data (can cause re-renders)
+
+Very large state management → use Redux/Zustand
+
+🆚 Context vs Prop Drilling
+Prop Drilling	Context API
+Pass props manually	Access directly
+Messy in big apps	Cleaner structure
+Hard to maintain	Centralized data
