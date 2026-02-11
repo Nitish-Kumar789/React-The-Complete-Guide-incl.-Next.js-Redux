@@ -9,3 +9,8 @@ framework:
 app -> shop -> product 
 app -> header -> cartModal -> cart 
 
+so in app component 
+we are having shoppingCart that is variable and value is basically objects of array 
+and one name is items
+
+so app will be gettign all the details  and then will be sending all details to child componet 
