@@ -1,0 +1,27 @@
+Notes: 
+name of context is generally like component only 
+like 
+A_____B_______ that way 
+anyway its more like component only 
+inside that we will be wrapping the component 
+
+
+we can intialise the context with any value
+it may be some number, text, array, object of array 
+
+In react version 19 or higher 
+we need to use
+
+UserContext.Provider
+otherwise directly UserContext 
+
+this provide is propery of context not user defined 
+
+we also need to export that context 
+
+remember the syntax 
+
+export default ContextName 
+
+
+
