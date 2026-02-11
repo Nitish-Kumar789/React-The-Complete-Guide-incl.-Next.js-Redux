@@ -1,0 +1,17 @@
+there are two ways of using context value
+
+one is using {useContext}
+
+other ways is using 
+
+directly wrapping all the code part into 
+
+
+return (
+<CartContext.Consumer>
+{ (cartCtx) => {code here} }
+</CartContext.Consumer>
+)
+
+
+but later one is not good approach we would prefer to go with useContext method only 

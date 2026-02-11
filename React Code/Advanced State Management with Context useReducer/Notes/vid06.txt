@@ -1,0 +1,26 @@
+so to use context 
+its three step format 
+
+one sepearte jsx file 
+for defining the template - mainly for autosuggestoin 
+
+
+other for the componet where data to pass 
+wrap for that component
+- createContext()
+
+where to use 
+use that - useContext()
+
+
+so since we are using context 
+so we will aim that we will not only pass the data 
+and read but also to do CRUD operations 
+
+in simple words 
+we will try to remove all props 
+if we are using context 
+
+one thing more: 
+=> if useContext is wrapped around let suppose app component then it will applicable to nested, nested to nested like that way to all the nested component 
+
