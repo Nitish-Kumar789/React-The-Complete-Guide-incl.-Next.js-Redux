@@ -23,4 +23,3 @@ if we are using context
 
 one thing more: 
 => if useContext is wrapped around let suppose app component then it will applicable to nested, nested to nested like that way to all the nested component 
-

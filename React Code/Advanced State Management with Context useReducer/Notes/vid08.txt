@@ -1,0 +1,1 @@
+If the context value changes, then any component using useContext() for that context will re-execute (re-render).
