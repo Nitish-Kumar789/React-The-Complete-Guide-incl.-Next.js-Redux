@@ -1,0 +1,10 @@
+every sideEffect doesn't require useEffect
+
+all hooks are used on the root leave of component 
+not inside any blocks,functions, if statement 
+
+
+now we will care that, after adding places , if user refreshes the page 
+data is not lost there so for that broswer povides us localStorage method 
+
+
