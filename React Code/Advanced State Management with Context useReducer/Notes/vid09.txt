@@ -1,0 +1,143 @@
+so if we are using the context, then there is no need of passing anything to the child component 
+it means child component will not receive anything as parameter 
+
+to achieve this what we will do simply 
+we wil put that variable, functions, objects 
+everything in org template 
+
+notes: that is only template for autosugeestion 
+and same things 
+we will store all ds [variable, objects, functions] in some variable 
+and will wrap that around the component like value = {ds}
+ds will me mostly object only
+
+in shopping cart context, we will be creating template 
+export const CartContext = createContext({
+  items: [],
+  addItemToCart: () => {},
+});
+
+
+but in app.jsx we will setting value, 
+  const ctxValue = {
+    items: shoppingCart.items,
+    addItemToCart: handleAddItemToCart,
+  };
+
+both ctxValue and CartContext is realated to each other 
+
+CartContext.Provider value={ctxValue}
+notes this value is like passing value to all the components 
+which is wrapped with CartContext
+
+only this props will be used nothing else in the whole program 
+
+
+so summarising the how to use context 
+
+there will be one template file to there only creatContext will be used 
+in app.jsx we will import that template and wrap around the Components
+
+and for remaininig files we will be only using the context like useContext
+
+
+  useImperativeHandle(ref, () => {
+    return {
+      open: () => {
+        dialog.current.showModal();
+      },
+    };
+  });
+
+
+so few things about dialog, normally 
+parent don't have access to child component, they can pass props to child component
+
+child functions and function are private by default
+
+so using useImperativeHandle we are doing 
+dialog is a ref using dialog.current we are accessing actual dom and using showModal(built-in browser method) we are showing the Modal 
+
+here open is a public method 
+
+here useImperativeHandle takes two parameter ref and one function 
+in method body 
+we have return statement 
+in return statement again we have function body 
+here  open is an object and value is one function 
+will will show showModal 
+
+
+
+
+
+
+  useImperativeHandle(ref, () => {
+    return {
+      open: () => {
+        dialog.current.showModal();
+      },
+    };
+  });
+
+
+so few things about dialog, normally 
+parent don't have access to child component 
+
+so using useImperativeHandle we are doing 
+dialog is a private method and using dialog.current we are accessing dom and using showModal we are showing the Modal 
+
+here open is a public method 
+
+here useImperativeHandle takes two parameter ref and one function 
+in method body 
+we have return statement 
+in return statement again we have function body 
+here  open is an object and value is one function 
+will will show showModal 
+
+
+
+  useImperativeHandle(ref, () => {
+    return {
+      open: () => {
+        dialog.current.showModal();
+      },
+    };
+  });
+
+
+so few things about dialog, normally 
+parent don't have access to child component 
+
+so using useImperativeHandle we are doing 
+dialog is a private method and using dialog.current we are accessing dom and using showModal we are showing the Modal 
+
+here open is a public method 
+
+here useImperativeHandle takes two parameter ref and one function 
+in method body 
+we have return statement 
+in return statement again we have function body 
+here  open is an object and value is one function 
+will will show showModal 
+
+so boiling down the code we can say that 
+open is a public method 
+since its value is a method 
+so usign ref.current.open we can run the showModal method
+
+
+dialog.current.showModal();
+ref -> targeting actual DOM -> built in html method to open modal 
+
+
+3️⃣ Flow Diagram (Very Important)
+Step 1 – Child defines what open does
+useImperativeHandle → exposes { open() }
+
+Step 2 – Parent calls it
+modalRef.current.open()
+
+Step 3 – That triggers
+dialog.current.showModal()

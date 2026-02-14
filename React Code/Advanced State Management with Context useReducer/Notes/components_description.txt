@@ -1,0 +1,99 @@
+01. App.jsx 
+
+1️⃣ Manages cart state (shoppingCart.items) — single source of truth.
+
+2️⃣ handleAddItemToCart(id)
+→ Adds new item or increases quantity if already exists.
+
+3️⃣ handleUpdateCartItemQuantity(productId, amount)
+→ Increases/decreases quantity and removes item if quantity ≤ 0.
+
+4️⃣ Creates ctxValue with:
+→ items
+→ addItemToCart
+→ updateItemQuantity
+
+5️⃣ Wraps app with CartContext.Provider so all children (Header, Shop, Product) can access cart data without prop drilling.
+---------------------------------------------------------------------------------------------------------------------------
+02. Cart.jsx
+
+1️⃣ Uses useContext(CartContext) to get items and updateItemQuantity from global cart state.
+
+2️⃣ Calculates total cart price using reduce() and formats it to 2 decimal places.
+
+3️⃣ If cart is empty → shows "No items in cart!".
+
+4️⃣ If cart has items → loops through items and displays:
+
+Name
+
+Price
+
+Quantity
+
++ and - buttons
+
+5️⃣ + and - buttons call updateItemQuantity(id, amount)
+→ +1 increases quantity
+→ -1 decreases quantity
+---------------------------------------------------------------------------------------------------------------------------
+03. CartModal.jsx
+
+1️⃣ Creates a dialog ref to access the native <dialog> DOM element.
+
+2️⃣ Uses useImperativeHandle(ref, …) to expose a public open() method to the parent.
+
+3️⃣ When parent calls ref.current.open() → it runs dialog.current.showModal() to open the modal.
+
+4️⃣ Uses createPortal() to render the modal outside the normal React tree into #modal DOM node.
+
+5️⃣ Renders:
+
+title
+
+<Cart /> component
+
+actions (buttons like Close / Checkout) inside a form.
+---------------------------------------------------------------------------------------------------------------------------
+04. Header.jsx
+
+1️⃣ Uses useContext(CartContext) to get items and calculates cartQuantity (number of unique products in cart).
+
+2️⃣ Creates a modal ref and passes it to <CartModal />.
+
+3️⃣ When "Cart" button is clicked → modal.current.open() is called → opens the modal.
+
+4️⃣ Dynamically decides modal buttons:
+
+If cart empty → only Close
+
+If cart has items → Close + Checkout
+
+5️⃣ Renders header with logo, title, and a button showing Cart (quantity).
+---------------------------------------------------------------------------------------------------------------------------
+05. Product.jsx
+
+1️⃣ Uses useContext(CartContext) to access addItemToCart function.
+
+2️⃣ Displays product details: image, title, price, and description.
+
+3️⃣ Shows an "Add to Cart" button.
+
+4️⃣ When button is clicked → calls addItemToCart(id) from context.
+
+5️⃣ This triggers cart state update in App → cart re-renders automatically.
+---------------------------------------------------------------------------------------------------------------------------
+06. Shop.jsx
+
+1️⃣ Acts as a layout/wrapper component for the shop section.
+
+2️⃣ Displays a heading: “Elegant Clothing For Everyone”.
+
+3️⃣ Receives children from parent (App).
+
+4️⃣ Renders whatever is passed as children (your list of <Product /> items).
+
+5️⃣ It does NOT manage state or logic — it only structures UI.
+---------------------------------------------------------------------------------------------------------------------------
+
+
