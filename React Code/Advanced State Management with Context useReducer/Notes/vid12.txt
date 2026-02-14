@@ -1,0 +1,22 @@
+so coming to useReducer 
+generally its used with context 
+but not necessary 
+
+so what we can do here is that 
+there will be all functions bundled togher 
+and identifier will be always type 
+which tells what sort of action to perform 
+and coming to payload, it will always 
+extra data that will be sending to perform that type of actions 
+
+
+so ultimately on basis of if condition 
+we will perform that operation 
+
+notes: 
+useReducer doesn't reduce code 
+but it bundle together function at one place 
+
+
+
+

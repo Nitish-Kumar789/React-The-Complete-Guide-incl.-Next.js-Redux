@@ -11,7 +11,7 @@ Basic Syntax:
 const [state, dispatch] = useReducer(reducer, initialState);
 
 state : always current react state value, can be number, string,array, object or anything
-dispatch : function to update state 
+dispatch : mostly object, automatically calls reducer function
 reducer : function that will decide how to change the state, it will take parameter state, and action 
 so based on some action it will return latest stae 
 
