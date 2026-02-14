@@ -1,0 +1,26 @@
+useReducer: 
+
+Use it when:
+State depends on previous state
+Multiple related state values
+Complex business logic
+Forms with many inputs
+Cart systems 
+
+Basic Syntax:
+const [state, dispatch] = useReducer(reducer, initialState);
+
+state : always current react state value, can be number, string,array, object or anything
+dispatch : function to update state 
+reducer : function that will decide how to change the state, it will take parameter state, and action 
+so based on some action it will return latest stae 
+
+so flow 
+current state + action => latest state 
+
+function reducer(state, action) {
+  return newState;
+}
+
+
+initialState - its always intital value 
