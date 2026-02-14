@@ -1,0 +1,12 @@
+useEffect doesn't return anthing 
+
+=> it will only be executed once whole component renders 
+
+-> number of time it will be executed depends on dependency array 
+useEffect(() => {},[]) -> only once after component renders
+useEffect(() => {}) ->  many times it depends when component re-renders
+useEffect(() => {},[value]) -> many times , depends on how many times value changes 
+
+=> there is one concept of fallbacktext 
+let suppose we are Fetching api call, and it is taking time so meanwhile we can put some fall back text as 
+fallbackText="Sorting places by distance..."
