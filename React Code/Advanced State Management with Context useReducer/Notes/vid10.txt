@@ -1,0 +1,12 @@
+so what we will do now in the app.jsx 
+we will remove all extra and context related information 
+like useState, context vlaue and all functions 
+let suppose in complex application 
+there can be many contexts so can lead to code bloating 
+
+
+-> Every component must return some JSX element[html, fragments, another component] or null
+
+-> let suppose we are using some component and automatically children props is passed, no need to pass from parent 
+component
+but if you want to use then you must accpet it as {children} and later you can put that props in return statement
