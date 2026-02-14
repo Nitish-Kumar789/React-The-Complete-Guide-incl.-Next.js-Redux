@@ -1,0 +1,18 @@
+If we want to get location of the broswer 
+then there is one method provided by broswer itself 
+
+navigator.geolocation.getCurrentPosition((position) => {
+  const xCoord = position.coords.latitude;
+  const yCoord = position.coords.longitude;
+});
+
+sideeffect are the section which is a bit independent of the main code 
+main code will basically return jsx element 
+help in rendering UI of the page 
+
+but sideeffect are like some extra piece of code 
+that may take time to run 
+
+
+
+
