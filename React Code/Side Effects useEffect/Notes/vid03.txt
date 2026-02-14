@@ -1,0 +1,12 @@
+In this section 
+we want to show the availalbe place based on the current location 
+so one solution will be to use useEffect
+but the main issue is that 
+it will stuck in infinite loop and our app will crash 
+reason being: 
+
+after one navigator call state will be updated and then again component will be render and in this process 
+navigator call wil happen and state will be updated 
+
+so our approach should be someting like 
+can we change the state only once 
