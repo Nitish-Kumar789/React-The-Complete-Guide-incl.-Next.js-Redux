@@ -1,0 +1,124 @@
+01. App.jsx
+What This App Component Is Doing:
+
+1️⃣ Manages selected places using useState(pickedPlaces) and stores the place to delete using useRef(selectedPlace).
+
+2️⃣ Uses a Modal (via modal ref) to show a delete confirmation before removing a place.
+
+3️⃣ handleSelectPlace(id) → Adds a place from AVAILABLE_PLACES to pickedPlaces (prevents duplicates).
+
+4️⃣ handleStartRemovePlace(id) → Opens modal and stores selected place ID.
+handleRemovePlace() → Removes that place from state.
+
+5️⃣ Renders two Places components:
+
+One for selected places
+
+One for available places
+---------------------------------------------------------------------------------------------------------
+02. DeleteConfirmation.jsx
+
+1️⃣ Receives two props: onConfirm and onCancel (functions from parent).
+
+2️⃣ Displays a confirmation message asking if the user wants to remove a place.
+
+3️⃣ "No" button → calls onCancel (closes modal).
+
+4️⃣ "Yes" button → calls onConfirm (removes place).
+
+5️⃣ It is a pure UI component — no state, just triggers parent functions.
+
+---------------------------------------------------------------------------------------------------------
+03. Modal.jsx
+
+1️⃣ Uses forwardRef so parent can control it using a ref.
+
+2️⃣ Uses useImperativeHandle to expose two methods:
+
+open() → calls dialog.current.showModal()
+
+close() → calls dialog.current.close()
+
+3️⃣ Internally uses a dialog ref to access the native <dialog> DOM element.
+
+4️⃣ Uses createPortal() to render the modal inside the DOM node with id modal.
+
+5️⃣ Renders {children} inside the dialog — so any component (like DeleteConfirmation) can appear inside the modal.
+
+---------------------------------------------------------------------------------------------------------
+04. Places.jsx
+1️⃣ Receives props: title, places, fallbackText, and onSelectPlace.
+
+2️⃣ Displays the section title dynamically using title.
+
+3️⃣ If places array is empty → shows fallbackText.
+
+4️⃣ If places has items → maps over them and renders a list of place cards.
+
+5️⃣ When a place is clicked → calls onSelectPlace(place.id) (parent decides whether to add or remove).
+---------------------------------------------------------------------------------------------------------
+05. data.js
+1️⃣ Imports image assets used for displaying each place.
+
+2️⃣ Defines a constant array AVAILABLE_PLACES containing place data.
+
+3️⃣ Each place object includes: id, title, image (src + alt), lat, and lon.
+
+4️⃣ This file acts as a static data source for the app.
+
+5️⃣ Other components (like App or Places) read from this array to render places.
+
+---------------------------------------------------------------------------------------------------------
+06. index.css
+
+1️⃣ Sets global styling → fonts, colors, background gradient, smoothing, and layout defaults.
+
+2️⃣ Styles the header section → logo, title, subtitle, spacing, and text appearance.
+
+3️⃣ Styles the Places grid using CSS Grid (auto-fill, minmax) to make responsive cards.
+
+4️⃣ Adds hover animations and effects to place cards (rotation + shadow).
+
+5️⃣ Styles the modal and delete confirmation → backdrop, buttons, animations, and layout.
+
+---------------------------------------------------------------------------------------------------------
+
+07. loc.js
+
+
+1️⃣ toRad(value) → Converts degrees to radians (needed for distance formula).
+
+2️⃣ calculateDistance(...) → Uses Haversine formula to calculate distance between two latitude/longitude points (in kilometers).
+
+3️⃣ R = 6371 → Earth’s radius in kilometers.
+
+4️⃣ sortPlacesByDistance(places, lat, lon) → Sorts places based on distance from a given location.
+
+5️⃣ Returns a new sorted array (does not mutate original places array)
+---------------------------------------------------------------------------------------------------------
+08. main.js
+
+1️⃣ Imports ReactDOM to render the React app into the browser.
+
+2️⃣ Imports the main App component (root component of the app).
+
+3️⃣ Imports global CSS (index.css) for styling.
+
+4️⃣ Uses createRoot() to create a React root inside the DOM element with id root.
+
+5️⃣ Calls .render(<App />) to start the React application.
+
+---------------------------------------------------------------------------------------------------------
+09. index.html
+
+1️⃣ Basic HTML structure with meta tags, favicon, and page title.
+
+2️⃣ <div id="root"></div> → Main mounting point where React renders <App />.
+
+3️⃣ <div id="modal"></div> → Separate DOM node used for rendering modals via createPortal().
+
+4️⃣ <script type="module" src="/src/main.jsx"></script> → Loads your React entry file.
+
+5️⃣ This file is the base template Vite uses to start your React app.
+
+---------------------------------------------------------------------------------------------------------
