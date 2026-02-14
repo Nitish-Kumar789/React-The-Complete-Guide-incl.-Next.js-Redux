@@ -1,0 +1,92 @@
+In this section, we will be learning what is side effect and useEffect 
+where to use and where not to use 
+
+
+React component is meant to be a function 
+but if it doing api call, affecting local storage, dom access 
+this is side effect and to handle this we have useEffect concept 
+and syntax of useEffect is: 
+
+import {useEffect} from 'react'
+
+useEffect(() => {// side effect code here},[dependicies])
+Side Effect → Something that affects outside the component.
+
+useEffect → React Hook used to handle side effects properly.
+
+
+| Side Effect         | useEffect                |
+| ------------------- | ------------------------ |
+| Concept             | Hook                     |
+| Any external change | Tool to handle it        |
+| Example: API call   | Used to perform API call |
+
+
+
+What is a Side Effect?
+
+A React component is meant to be a pure function.
+
+A pure function:
+
+Takes input (props/state)
+
+Returns JSX
+
+Does not affect anything outside itself
+
+But when a component does something like:
+
+Making an API call
+
+Updating localStorage
+
+Accessing or modifying the DOM
+
+Setting timers (setTimeout, setInterval)
+
+Adding event listeners
+
+👉 This is called a Side Effect.
+
+
+How useEffect Works
+
+useEffect takes two arguments:
+
+A function → contains side effect logic
+
+A dependency array → controls when it runs
+
+Different Behaviors:
+Dependency Array	Behavior
+[]	Runs only once (on mount)
+[value]	Runs when value changes
+No array	Runs after every render
+5️⃣ Where to Use useEffect
+
+Use it when:
+
+Fetching API data
+
+Working with localStorage
+
+Setting up timers
+
+Subscribing to events
+
+Manual DOM operations
+
+6️⃣ Where NOT to Use useEffect
+
+Do NOT use it for:
+
+Simple state updates
+
+Event handlers (like button click logic)
+
+Pure calculations
+
+Derived state that can be computed directly
+
+If something can be done directly during render, you don’t need useEffect.
