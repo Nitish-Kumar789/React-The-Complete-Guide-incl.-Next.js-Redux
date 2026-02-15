@@ -1,0 +1,102 @@
+localStorage is a function, provided by brower 
+having two mthod getItem and setItem 
+
+to set Item 
+
+
+localStorage.setItem('key',JSON.stringify([]))
+
+to getItem
+
+localStorage.getItem('key')
+
+since for the places 
+all places id will be stored in the local storage like
+"[92,10,20,1]"
+
+so what will be doing here is that
+while storing it will be like 
+'[]' and while getting back using parse method, we will do like []
+
+JavaScript Object	JSON(JavaScript object notation)
+Real JS data type	String format
+Used inside code	Used for data transfer
+Can have functions	Cannot have functions
+Keys don’t need quotes	Keys must use double quotes
+Can use single quotes	Only double quotes
+🎯 Simple Understanding
+
+Think like this:
+
+Object → Working data inside JS
+JSON → Packaging format to send/store data
+
+while use setItem - need two params one key and other value 
+while use getItem - use only one param key 
+
+
+
+
+object: 
+
+{
+  name: "Nitish"
+}
+
+JSON(String Format):
+
+'{"name":"Nitish"}'
+
+=> Here we are syncing 
+React State  ↔  localStorage
+
+and we are also managing two state 
+  const [availablePlaces, setAvailablePlaces] = useState([]); => for all the places 
+  const [pickedPlaces, setPickedPlaces] = useState([]); => for selected places
+
+below is always wrong, bcz it will return undefined 
+() => {} this is wrong, if we want to return sth 
+like it should be like 
+() => {return ...}
+
+() => (5)this is also correct all code within parenthesis 
+will be retured 
+5 will be returned here 
+
+() => ({}) returning object 
+
+() => ({name : "nitish"})
+
+
+
+
+mostly all function will return something 
+or cal some some other function 
+or will be used as eventListner 
+
+🔥 Final Correct Understanding
+Syntax	Returns
+() => {}	undefined
+() => { return 5 }	5
+() => 5	5
+() => (5)	5
+() => ({})	object
+() => {} with no return	undefined
+
+---------------------
+
+| Syntax               | Returns   |
+| -------------------- | --------- |
+| `() => {}`           | undefined |
+| `() => { (5) }`      | undefined |
+| `() => (5)`          | 5         |
+| `() => { return 5 }` | 5         |
+
+() => { return (5) } will return 5 
+
+
+
+
+
+
+
