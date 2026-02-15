@@ -1,0 +1,23 @@
+one component is re-rendered most important point is that
+all the function is re-created not re-executed
+
+so js consider every re-created function as different
+
+**On every render:
+A new fn function object is created
+Even though code looks same**
+
+Memory reference is different
+
+ultimately:
+=>Because functions are objects.
+=>Objects are compared by reference.
+
+so this thing is considered in useEffect(() => {} ,[fn])
+
+let suppose because of state change or because of any reason
+component re-render in that case fn will be re-created and that useEffect will be run again and again
+
+
+here in this code section, we might get stuck into infinite loop 
+but since we are closing the dialog thats why we are safe 
