@@ -1,0 +1,168 @@
+In summary: 
+Due to state change, component re-runs,, recreate js memory, compare dependcies, and updates only necessary DOM 
+
+so during re-run, re-rendere
+Effect to below components
+Variables - recreated 
+functions - recreated
+useState - only required varialbe value change, for other it won't change
+useEffect - if dependencies array change, then only re-run
+jsx - not entire dom will be udpated but only the required element will be compared and re-rendered
+
+Example Component
+import { useState, useEffect } from "react";
+
+function Example() {
+  console.log("Component running");
+
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState("Nitish");
+
+  const message = "Hello World";
+
+  function helper() {
+    console.log("Helper recreated");
+  }
+
+  useEffect(() => {
+    console.log("Effect 1 ran");
+  }, [count]);
+
+  useEffect(() => {
+    console.log("Effect 2 ran");
+  }, [name]);
+
+  return (
+    <>
+      <p>{count}</p>
+      <p>{name}</p>
+      <button onClick={() => setCount(count + 1)}>
+        Increase Count
+      </button>
+    </>
+  );
+}
+
+🔥 Now Suppose count Changes
+
+User clicks button → setCount() runs.
+
+Let’s see what happens step by step.
+
+🧠 Step 1: Component Function Runs Again
+
+Everything inside function runs again:
+
+console.log("Component running")
+
+useState calls
+
+Variables recreated
+
+helper() function recreated
+
+JSX recreated
+
+Important:
+
+Functions are recreated
+Variables are recreated
+JSX is recreated
+
+
+But not everything triggers effects.
+
+🧠 Step 2: What Actually Changes?
+🔹 State Values
+
+count → updated value
+
+name → stays same
+
+🔹 Variables
+const message = "Hello World";
+
+
+Recreated again.
+
+🔹 Nested Function
+function helper() {}
+
+
+Recreated again (new reference).
+
+🧠 Step 3: useEffect Behavior
+
+React now checks dependencies.
+
+Effect 1:
+useEffect(() => {}, [count]);
+
+
+count changed → ✅ Effect 1 runs.
+
+Effect 2:
+useEffect(() => {}, [name]);
+
+
+name did NOT change → ❌ Effect 2 does NOT run.
+
+🧠 Step 4: DOM Update
+
+React compares:
+
+Previous JSX vs New JSX.
+
+Only updates:
+
+<p>{count}</p>
+
+
+Because count changed.
+
+Other DOM parts remain untouched.
+
+🔥 What Does NOT Change?
+
+The component instance is not destroyed.
+
+DOM is not fully reloaded.
+
+useState values persist.
+
+useEffect does NOT run if dependencies didn’t change.
+
+📌 Summary Table
+Thing	Recreated?	Re-executed?
+Component function	✅ Yes	✅ Yes
+Variables	✅ Yes	—
+Nested functions	✅ Yes	❌ Not executed automatically
+JSX	✅ Yes	—
+useEffect (matching dep)	—	✅ Yes
+useEffect (non-matching dep)	—	❌ No
+DOM	❌ Only changed parts update	—
+🎯 Very Important Concept
+
+Re-render does NOT mean:
+
+Everything resets
+
+Everything re-runs blindly
+
+React is smart.
+
+It:
+
+Re-runs component function
+
+Recreates JS memory
+
+Compares dependencies
+
+Updates only necessary DOM
+
+🚀 One Line Summary
+
+When one state changes:
+
+Entire component function runs again, but only dependent effects and changed DOM parts update.

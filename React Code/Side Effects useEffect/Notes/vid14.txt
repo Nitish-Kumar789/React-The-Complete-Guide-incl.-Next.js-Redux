@@ -1,0 +1,3 @@
+Its simple observation is that after after 10 sec entire component will be re-evaluated 
+that make the app slow 
+so we will make seperate component for progress bar 
