@@ -1,0 +1,2 @@
+so whenever open value changes like from true to false or vicevera 
+then modal component will be executed 
