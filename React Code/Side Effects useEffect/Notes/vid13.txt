@@ -1,0 +1,34 @@
+When we click on pickedupPlace, it will automatically remove from after timer of 3 second
+but end user are not sure for that reason we will be using progress tag, having two main attribute 
+value = {}, max= {}
+value will be the current value
+max will be the max value 
+
+
+most of the time, it will be use with setInterval 
+
+setInterval(() => {}, 10)
+
+so after every 10 millisecond function body will be getting executed
+
+its bettter to use some state here 
+
+const [remainingTime, setRemainingTime] = useState(3000)
+
+setInterval(() => {setRemainingTime((prevTime => prevTime - 10 ))}, 10)
+
+also there is one issue 
+it won't be stop 
+so we will to use another in-built browser function 
+clearInterval and bind then in useEffect
+
+
+
+useEffect(() => {
+const interval = setInterval(() => {setRemainingTime((prevTime => prevTime - 10 ))}, 10)
+ 
+return () => { clearInterval(interval)}}, [])
+
+so progress -> value -> max -> setInterval, clearInterval, useEffect
+
+

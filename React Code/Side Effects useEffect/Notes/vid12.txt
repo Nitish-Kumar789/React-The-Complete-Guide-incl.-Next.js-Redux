@@ -1,0 +1,32 @@
+
+object
+array
+function
+date
+map
+set
+
+array, function, date, map, set => internally these things are also object 
+
+primitive data types are stored as value 
+but all objects are stored as reference 
+
+
+whenever we are using useEffect
+like
+useEffect(() => {},[fn])
+
+so in order to avoid re-creation of function 
+we will be using useCallback 
+
+this is another hook 
+and depdency array is same as useEffect
+
+syntax is:
+
+import {useCallback} from 'react'
+const fn = useCallback(fn,[])
+
+so callback stores the fn so that it will not be reacrated again 
+
+
