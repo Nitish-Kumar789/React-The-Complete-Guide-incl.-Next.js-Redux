@@ -1,0 +1,32 @@
+so now what we are aiming is that we will 
+when onDeleteConfirmation component will render 
+its works is to show the dialog whenthter to delete or no 
+
+there are two case 
+01. if you manually delete the card/places by clicking on yes 
+02. if automatically delete the card/place 
+
+so after 3 second, we will delete the card 
+
+but there are few issue 
+01. Modal is always rendered but nots visible 
+and because of that onDeleteConfirmation will be run and timer will start 
+that we don't want 
+
+solution in modal component
+{open ? children : null}
+
+02. let suppose we delete also then also in the backgroud 
+timer is running which will initiate the deletion process that we surely not wanted 
+
+
+=> 
+setTimeout(() => {},30000)
+useEffect(() => {}, [])
+
+{}[function body] it will be returning undefined and thats okay
+we don't care for that 
+basically for these we want to run some functions
+
+setTimeout is a browser function, we don't have to import anything 
+
