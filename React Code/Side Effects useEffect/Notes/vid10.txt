@@ -30,3 +30,22 @@ basically for these we want to run some functions
 
 setTimeout is a browser function, we don't have to import anything 
 
+timer expiry means timer has run for whole duration 
+
+timer stop means before timer completes its first cycle 
+
+
+template for timer and clear
+
+useEffect( () =>  { const timer = setTimeout(() => {}, time(ms)) return () => {clearTimeout(timer);
+} }, [] ) 
+
+so effect of useEffect will only run when dependicies array in changing[not in this case]
+
+setTimeout will be executed once that dialog will be opened 
+reasoned because of useEffect it will start automatically and expired after 3 second 
+
+clearTimeout will run just bfore jsx unamount from DOM 
+
+sequence is import first setTimeout will run then only clearTimeout will run 
+
