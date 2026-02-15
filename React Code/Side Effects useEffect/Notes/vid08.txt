@@ -1,0 +1,9 @@
+Think Like This
+Render phase:
+
+Describe UI
+
+
+Effect phase:
+
+Interact with outside world
