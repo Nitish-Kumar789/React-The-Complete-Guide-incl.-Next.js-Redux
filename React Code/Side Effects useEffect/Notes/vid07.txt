@@ -1,0 +1,51 @@
+dialog.current.showModal() 
+this enables the backdrop meaning
+when modal is open back element won't be interactive 
+
+
+other option is like 
+we can create useState()
+which will be having only two value either true or false 
+
+true means modal should be open 
+false means modal shouln't be open 
+
+
+and pass that props while calling Modal component 
+and in the child we will be usign like 
+
+<Modal open = {open - this will be either true or false}>
+</Modal>
+
+one thing more this is declarative way not imperative way 
+
+and in this case background will be interactive but we can overcome that using extra fixed with some css styling
+
+to solve this issue we will be having 
+
+useEffect
+If you use <dialog> element declaratively:
+
+<dialog ref={dialog} open={open}>
+
+
+It won’t fully behave like showModal().
+
+So you may need:
+
+useEffect(() => {
+  if (open) {
+    dialog.current.showModal();
+  } else {
+    dialog.current.close();
+  }
+}, [open]);
+
+
+Now:
+
+State controls dialog
+
+You still use native modal behavior
+
+Background stays non-interactive 
