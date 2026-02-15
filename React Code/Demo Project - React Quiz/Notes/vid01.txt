@@ -1,0 +1,14 @@
+Here we will be making one quiz app 
+using knowledge of side effect, useEffect, dependencies  cleanup 
+
+info:
+There will be questions and 4 answers 
+and for each question, there will be progress bar 
+
+once quiz completed
+will get status of:-
+question skipped 
+answered correctly 
+answered incorrectly 
+
+and all questions with answers 
