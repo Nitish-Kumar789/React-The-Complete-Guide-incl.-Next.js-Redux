@@ -49,3 +49,37 @@ clearTimeout will run just bfore jsx unamount from DOM
 
 sequence is import first setTimeout will run then only clearTimeout will run 
 
+when model opens: 
+
+open = true
+↓
+DeleteConfirmation mounts
+↓
+useEffect runs
+↓
+setTimeout starts (3 sec)
+
+Case A: User clicks Yes before 3 sec
+
+Delete
+↓
+Modal closes
+↓
+Component unmounts
+↓
+Cleanup runs
+↓
+clearTimeout cancels timer
+
+
+Case B: 3 sec finishes
+
+Timer callback runs
+↓
+Auto delete
+↓
+Modal closes
+↓
+Component unmounts
+↓
+Cleanup runs (but timer already finished)
