@@ -1,0 +1,6 @@
+so we will be clearing the interval and timout 
+after after every question 
+and for new render it will be created agian 
+
+one thing more 
+duruing re-render only minimal jsx component will be rendered 
