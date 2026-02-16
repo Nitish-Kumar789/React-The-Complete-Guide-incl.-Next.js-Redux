@@ -1,0 +1,9 @@
+Quiz.jsx 
+const [userAsnwers, setUserAnswers] = useState([]);
+executed for every answer submitted or null 
+
+
+QuestionTimer.jsx 
+const [remainingTime, setRemainingTime] = useState(timeout);
+
+will automatically run for all questions because all question is having progress bar 

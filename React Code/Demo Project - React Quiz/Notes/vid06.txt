@@ -1,0 +1,19 @@
+most important thing is from now on, we need to check for how many states are there in our entire code 
+const [userAsnwers, setUserAnswers] = useState([]);
+
+
+
+
+so whenever user select some answers or if timer passed in that case answer is null 
+so for each question, component re-renders 
+
+and becaue of that many things will be getting hampered 
+function re-creates and hence dependency array changes, therefore other action will change 
+
+
+If a function is using state and props 
+then you must includde then in dependency array 
+
+-----------------------------
+
+
