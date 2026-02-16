@@ -1,0 +1,31 @@
+Here, we will be adding two changes: 
+answer will be shuffled 
+at end there should be some seperate element to show that quiz is completed 
+no need to make seperate component 
+just add one image and some text that's it 
+
+
+arr.sort()
+
+by default, internally it will convert array into string and sort alphabetically 
+
+so if we want to add ascending/descending order, you must provide 
+comparison function 
+we can do sth like
+
+arr.sort((a,b) => a - b ) for ascending
+arr.sort((a,b) => b - a ) for descending
+
+for randomness 
+arr.sort(() => Math.random() - 0.5)
+
+
+
+Math.random() will generate number between 
+0 <= val < 1 
+
+so sort will be having value between
+-0.5 <= val < 0.5 
+so sometime ascending and sometime descending
+means randomness
+
