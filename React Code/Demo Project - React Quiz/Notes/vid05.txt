@@ -1,0 +1,61 @@
+JS runs synchronous code first
+
+setTimeout is asynchronous browser web api function
+
+setTimeout(callbackFunction, delayInMilliseconds);
+
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setShow(false);
+  }, 3000);
+
+  return () => {
+    clearTimeout(timer);
+  };
+}, []);
+
+
+
+so, conclusion when using setTimout 
+it is advisabe to use clearTimeout(), good practice
+
+
+it will return timerId 
+that will be stoerd in some variable and later passed to clearTimeout 
+
+so in real word 
+
+setTimeout will be used with useState and useEffect 
+
+why useState 
+
+because after delayInMilliseconds, we want things to change 
+may be rendering some UI element, or some calculation, calling some function, or chaning some varialbe vlaue 
+
+for all these things, we want that component gets updated value for that reason we will be using usestate 
+
+why useEffect?
+if don't use useEffect in that case after after delayInMilliseconds a new timer will start 
+but that we don't want 
+
+what we simply want is that, we aim that only once a timer is starting, later it will be handled by web browser 
+in useEffect, no depedecny is changing so it will execute only once 
+
+7️⃣ Common Mistake
+
+Wrong:
+setTimeout(handleClick(), 2000);
+
+This calls function immediately.
+Correct:
+setTimeout(() => handleClick(), 2000);
+
+OR
+setTimeout(handleClick, 2000);
+
+
+
+ut(onTimeout, timeout)	✅	⭐ Best
+setTimeout(() => onTimeout(), timeout)	✅	Good
+setTimeout(() => { return onTimeout() }, timeout)	✅	Works but unnecessary
