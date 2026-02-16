@@ -1,0 +1,15 @@
+for Header.jsx 
+for importing image 
+normally use the code like 
+
+import imgName from "./path"
+<img src = {imgName} alt = "fallback text">
+
+for Quiz.jsx
+motto => This component will show questions, get user answers, and show next question.
+notes: 
+Questions will be stored in some different file 
+and we will be accessing using index 
+and all the answers will be stores in array 
+
+
