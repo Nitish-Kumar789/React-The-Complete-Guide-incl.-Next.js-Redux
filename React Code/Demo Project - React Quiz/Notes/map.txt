@@ -1,0 +1,76 @@
+map() is an array method
+
+it: 
+Loops through each element
+Transforms it
+Returns a NEW array
+
+Original array stays unchanged.
+
+
+const numbers = [1, 2, 3];
+
+const doubled = numbers.map((num) => num * 2);
+
+console.log(doubled);
+
+so, conclusion
+map will take one array, iterate over elements, do some Transformation on each element and will return new array 
+
+Notes: 
+
+arr.map((item) => { return item * 2})
+
+but coming to react
+let suppose
+
+const arr = ["nitish","kumar","kamath"]
+
+and we have to render all element on UI[most important, map is returning jsx element ,react will collect and then renders it]
+
+<ul className = "">
+{arr.map((item) => (<li key={item}>{item}</li>))}
+</ul>
+
+things to notice 
+we will wrap around ul bcz of obvious reason 
+and every li will be having key, bcz react tracks and only updates required jsx element in dom 
+
+----------
+forEach 
+It does NOT return anything.
+It does NOT create new array.
+It does NOT modify array unless you manually mutate.
+let suppose 
+const arr = [1,2,4]
+
+arr.forEach((item) => (item * 2))
+
+value is still same [1,2,4]
+map -> always return sth may be some value or jsx element 
+
+if map is returning some value 
+then syntax is like 
+arr.map(() => {return })
+
+if map in returning jsx element
+then 
+arr.map(() => ())
+
+
+forEach -> cann't return 
+
+
+map()
+Loops through array
+Transforms each item
+Returns new array
+Used heavily in React
+Must return something
+
+forEach()
+Loops through array
+Used for side effects
+Does NOT return new array
+Always returns undefined
+
