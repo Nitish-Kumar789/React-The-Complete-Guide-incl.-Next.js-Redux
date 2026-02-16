@@ -1,0 +1,56 @@
+All questions will be stored in question.js
+file as array of objects 
+the first answer is the corrrect answer but while showing question to the users
+we will normally shuffle the answers 
+
+for Quiz.js 
+answer will be stored as array of answer like 
+['A','C', ....]
+
+so in this case, we know that first two questions has already been answered
+so we are damn sure that next question will be third only 
+in this way we can remove below state: 
+const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
+
+in react, we always try to use minimum state and make much use of derived state 
+for question index we can easily do that
+
+we will make on question.js file which will be having sets of questions 
+name key as id, text and answers
+
+we will import question.js[means question and answers] and using map we will render on UI 
+
+every answer will be wrapped by button element 
+because we will be adding event Listener 
+
+
+function handleAnser(answer)
+{
+    setUserAnswers((prevUserAnswers) => {
+        return [...prevUserAnswers, answer];
+    })
+}
+
+button onClick = {() => handleAnser(answer)}
+
+
+and code will be like 
+
+for question
+generally question will be in h2 tag
+
+{QUESTION[activeQuestionIndex].text}
+
+for answer 
+generally answer will be in ul tag 
+
+<ul>
+{QUESTION[activeQuestionIndex].answers.map((answer) => (<li key = {answer}>
+<button>{answer}</button>
+ </li>))}
+ </ul>
+ we will add css to h2, ul and li element 
+
+
+
+
