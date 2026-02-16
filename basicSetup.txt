@@ -1,0 +1,67 @@
+✅ 1. Install Node.js (If not installed)
+
+Download from: https://nodejs.org
+
+Install LTS version
+
+Verify installation in terminal:
+
+node -v
+npm -v
+
+✅ 2. Create Vite + React Project
+
+Open VS Code → Terminal (Ctrl + `)
+
+Run:
+
+npm create vite@latest
+
+
+It will ask:
+
+✔ Project name → my-react-app (or anything)
+
+✔ Select framework → React
+
+✔ Select variant → JavaScript (or TypeScript if you want)
+
+Then move inside folder:
+
+cd my-react-app
+
+✅ 3. Install Dependencies
+npm install
+
+
+This installs all required packages.
+
+✅ 4. Start Development Server
+npm run dev
+
+
+You will see something like:
+
+Local: http://localhost:5173/
+
+
+Press Ctrl + Click on the link → App will open in browser 🚀
+
+✅ 5. Project Structure (Important Files)
+my-react-app/
+ ├── node_modules/
+ ├── public/
+ ├── src/
+ │   ├── App.jsx
+ │   ├── main.jsx
+ ├── package.json
+ ├── vite.config.js
+
+
+👉 You mostly work inside src folder
+
+✅ 6. To Stop Server
+
+Press:
+
+Ctrl + C
