@@ -1,0 +1,45 @@
+Find 
+
+find() is an array method.
+
+It:
+
+Loops through array
+Returns the FIRST element that matches condition
+Stops immediately after finding it
+
+If nothing matches → returns undefined.
+const numbers = [10, 20, 30, 40];
+
+const result = numbers.find((num) => num > 25);
+
+console.log(result);
+
+30
+
+
+
+| find()                  | filter()            |
+| ----------------------- | ------------------- |
+| Returns ONE element     | Returns array       |
+| Stops after first match | Checks entire array |
+| Returns object/value    | Returns array       |
+
+for filter
+numbers.filter((num) => num > 25);
+
+Output:
+[30, 40]
+
+
+find() will only look for first mathcing element returns object/value
+filter() will iterate over whole array will return array 
+
+
+
+Memory Trick: 
+
+find → one
+filter → many
+map → transform
+forEach → side effect
