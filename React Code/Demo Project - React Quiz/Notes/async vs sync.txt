@@ -1,0 +1,96 @@
+most common asynchronous functions/method[scheduled and batched]: 
+
+🟢 1️⃣ Timers
+
+These run later (non-blocking).
+setTimeout()
+setInterval()
+clearTimeout()
+clearInterval()
+
+🔵 2️⃣ Promises
+
+Anything promise-based is async.
+Promise
+.then()
+.catch()
+.finally()
+async / await
+
+🟣 3️⃣ API / Network Calls
+
+fetch()
+axios.get() (external library)
+XMLHttpRequest
+
+🟡 4️⃣ React State Updates
+
+setState() (class components)
+useState() setter (like setCount())
+
+🟠 5️⃣ React Effects
+
+useEffect() (runs after render)
+
+🔴 6️⃣ Event-Based Async
+
+These happen later when triggered:
+addEventListener
+onClick
+onChange
+onSubmit
+
+List of synchronous: 
+
+🟢 1️⃣ Normal Functions
+
+🔵 2️⃣ Array Methods (Very Important)
+
+All these are synchronous:
+map()
+filter()
+reduce()
+forEach()
+find()
+some()
+every()
+sort()
+
+
+
+🟣 3️⃣ Loops
+
+for
+while
+do...while
+for...of
+for...in
+
+🟡 4️⃣ Conditionals
+
+if
+switch
+
+🟠 5️⃣ Variable & Assignment
+
+let
+const
+var
+=
+
+🔴 6️⃣ Math & String Methods
+
+Math.random()
+Math.floor()
+"abc".toUpperCase()
+"hello".includes("h")
+
+🟢 7️⃣ JSX Rendering Logic
+
+Inside React render:
+map() to render list
+calculating cssClass
+computing derived values
+
+
+JavaScript/React is single-threaded and synchronous by default, but it supports asynchronous operations through the event loo
