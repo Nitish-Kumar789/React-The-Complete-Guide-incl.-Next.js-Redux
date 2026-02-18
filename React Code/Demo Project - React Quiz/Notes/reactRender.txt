@@ -1,0 +1,42 @@
+In React 18+:
+
+React batches updates inside:
+Event handlers
+setTimeout
+Promises
+Native events
+Async functions
+
+State updates are asynchronous (not immediate)
+React batches multiple updates into one re-render
+State inside a render is a snapshot
+Use functional updates when depending on previous state
+
+
+=> React state updates are asynchronous and batched
+
+const [count,setCount] = useState(0)
+function handleClick() {
+  setCount(count + 1);
+  setCount(count + 1);
+  setCount(count + 1);
+}
+
+
+result is 1 
+
+function handleClick() {
+  setCount(prev => prev + 1);
+  setCount(prev => prev + 1);
+  setCount(prev => prev + 1);
+}
+
+
+result is 3 
+
+
+=> state action won't be immediate, but after function execution completed then only all state, eventhandler and other things will be executed 
+
+=> someetime function will be synchronous, but because of state variable it will be asynchronous
+
+
