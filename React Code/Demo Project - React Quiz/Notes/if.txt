@@ -1,0 +1,37 @@
+Correct Ways to Do Conditional Rendering
+
+✔ Method 1: Using && (Most Common)
+{condition && <p>Hello</p>}
+
+✔ Method 2: Ternary Operator
+{condition ? <p>Yes</p> : <p>No</p>}
+
+✔ Method 3: Use if Outside Return
+let content;
+
+if (condition) {
+  content = <p>Hello</p>;
+}
+
+return (
+  <>
+    {content}
+  </>
+);
+
+🚀 Final Answer
+
+❌ You cannot write if directly inside JSX block.
+✅ Use &&, ? :, or move if outside return.
+
+
+JSX only allows expression not statement 
+
+
+
+Expression = Answer [value]
+Statement = Instruction
+
+
+Ternary ? : is expression
+if is statement
