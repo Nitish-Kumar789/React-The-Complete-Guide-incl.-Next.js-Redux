@@ -7,3 +7,16 @@ QuestionTimer.jsx
 const [remainingTime, setRemainingTime] = useState(timeout);
 
 will automatically run for all questions because all question is having progress bar 
+
+
+
+Quiz.jsx 
+const [answerState, setAnswerState] = useState('');
+answerState Can be  below: 
+'' - intially 
+answered as soon as answer is selected
+correct after 2 second either this 
+wrong  after 2 second, either this 
+'' - afer 1 second 
+
+

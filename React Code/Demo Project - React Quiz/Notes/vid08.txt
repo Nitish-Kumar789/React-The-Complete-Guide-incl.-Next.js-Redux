@@ -1,0 +1,74 @@
+so whats happenning now, is after every 10 second, question is skipped and for that answer is set to null 
+and progress bar is updated after every 0.1 second 
+
+
+callback function: 
+function that passed as argument and called after some code execution 
+mainly in setTimeout and promises 
+
+
+Why we use callback?
+
+To run code after finishing something
+Common in API calls
+Used in event handling
+Used in setTimeout, promises, etc.
+
+in this lecture, we will be target to make Ui of Answers more interactive 
+like when we select one answer 
+
+if its correct then turn color to green, if wrong then its red 
+then after two second, question will be moved to next 
+
+so whole scenario, is like 
+once you click on one answer, after 1 second color change green or red 
+and afte 2 second next question 
+
+if you dont click then after 10 sec, skipped to next question 
+
+there are multiple things 
+
+one thing more 
+if there is normal jsx element in retun then its okay 
+
+but inside that if you want to render jsx element conditionally 
+in that case you cannn't do that except its map body 
+you have to again make a seperate block {}
+and inside that write condition in if block and 
+return the the jsx element 
+
+like 
+
+return (
+    <>
+jsx element 
+{
+
+     ifcondition ()
+
+
+    return (
+        <>
+
+       
+
+       </> 
+    )
+}
+  <>
+)
+
+Location	            Can use if?
+Inside component body	✅ Yes
+Inside JSX {}	        ❌ No
+Before return()	        ✅ Yes
+Inside map() callback	✅ Yes
+
+so let suppose, what if we want some condition in jsx 
+generally jsx expects jsx expression 
+
+refer document for if notes 
+
+=> best thing is if you want to render jsx element conditionally, then define it outside the return and store javascipt code in 
+variable like content  and make a placeholder to render 
+
