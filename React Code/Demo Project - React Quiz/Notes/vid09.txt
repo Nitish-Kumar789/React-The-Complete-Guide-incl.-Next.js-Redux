@@ -1,0 +1,20 @@
+Now issue is that we are facing shuffling issue now, so for that 
+=> useRef persists value across renders.
+
+
+In Answers.jsx 
+
+
+ here answers is basically all the 4 answer for current question
+onselect is basically handleSelectAnswer 
+ handleSelectAnswer - setAsnwerState() answered
+setUserAnswers() - will return array of all answer given by users
+after 1 sec setTimeout() - setAnswerState to Correct/wrong
+and after next 2 set setAnswerState to null 
+
+=> React components always receives one props object, not seperate paramaters
+=> If its normal javascript function, then that will receive seperate paramaters
+
+=> our main goal is that with every question changes, answers should be shuffled 
+
+we have made sepearte components for Question and Answers
