@@ -1,0 +1,16 @@
+Color coding concept : 
+
+
+Default Color : Light Blue 
+Hover Color: : Dark Blue 
+
+Selection Color : Light Yellow
+
+Correct Color : Light Green  
+Incorrect Color : Light Pink 
+
+Action: 
+
+On selecting answer, 
+after 1 sec either Light Green/Pink 
+after next 2 sec: next question 
