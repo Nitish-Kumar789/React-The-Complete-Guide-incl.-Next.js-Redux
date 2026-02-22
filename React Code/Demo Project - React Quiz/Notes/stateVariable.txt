@@ -20,3 +20,9 @@ wrong  after 2 second, either this
 '' - afer 1 second 
 
 
+Question.jsx 
+
+const [answer, setAnswer] = 
+useState({selectedAnswer : '',
+isCorrect : null})
+

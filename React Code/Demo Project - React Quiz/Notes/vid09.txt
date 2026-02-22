@@ -17,4 +17,4 @@ and after next 2 set setAnswerState to null
 
 => our main goal is that with every question changes, answers should be shuffled 
 
-we have made sepearte components for Question and Answers
+we have made seperate components for Question and Answers

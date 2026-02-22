@@ -1,0 +1,58 @@
+so whats issue now is that we are passing lots of prosp from parent to children 
+and thats not correct 
+
+so for that we will make a state for track things 
+
+
+and from that state only we will derive other value and functions 
+
+basically we will be making one state variable 
+
+answer which is object 
+will take care if answer is selected or not 
+
+and its correct or not 
+
+thats it 
+
+
+
+so this tutorial is basically making the components independant 
+
+
+and thats why will remove many props and useStter from Quiz componet 
+
+one thing more 
+=> we cann't use the key props in the parent component 
+that is reserved word
+so better alternative is to use other props name like index or questionIndex 
+
+so till now flow is sth like 
+
+use will get question 
+two option 
+either do sth
+will select some answer and after 1 sec will be reflected either right or wrong 
+and in next 2 sec, will move to next question 
+
+
+
+either do nth 
+after 10 sec, anwer will be marked as null and will move to the next question 
+
+so few things to note down is that
+so for questions.js 
+we don't have any name of export
+ we have like export default []
+so what we can do here is that 
+we can simply import with name import xyz from "./path"
+
+
+disabled = {answerState !== ''}
+
+means 👇
+
+✅ Simple Meaning
+
+👉 The element will be disabled (not clickable)
+when answerState is NOT empty.
