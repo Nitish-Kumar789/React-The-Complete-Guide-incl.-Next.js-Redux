@@ -1,0 +1,219 @@
+Counter.jsx 
+
+✅ 1️⃣ What this component does
+
+It shows a counter with Increment and Decrement buttons.
+It also checks whether the initial value is a prime number.
+
+✅ 2️⃣ What props it receives
+
+It receives initialCount as a prop.
+Example:
+
+<Counter initialCount={10} />
+
+That value:
+
+Is shown in UI
+
+Is used as starting state value
+
+✅ 3️⃣ What state it uses
+
+It uses:
+
+const [counter, setCounter] = useState(initialCount);
+
+This state:
+
+Stores current counter value
+
+Updates when buttons are clicked
+
+✅ 4️⃣ Important logic inside
+🔹 isPrime(number)
+
+Checks if a number is prime using loop till √number.
+
+🔹 handleIncrement()
+setCounter(prev => prev + 1);
+🔹 handleDecrement()
+setCounter(prev => prev - 1);
+
+Also logs render using log() function.
+
+✅ 5️⃣ What it renders
+
+It renders:
+
+A message showing:
+
+Initial value
+
+Whether it is prime or not
+
+A Decrement button
+
+Current counter value (via CounterOutput)
+
+An Increment button
+
+UI structure:
+
+Initial value info
+[ - ]   counter   [ + ]
+🔥 Important Observation (React Concept)
+
+isPrime(initialCount) runs every time component renders.
+Even if counter changes.
+
+This can affect performance if calculation is heavy.
+
+(Optimization possible using useMemo — but that’s advanced)
+
+---------------------------------------------------------------
+counterHistory.jsx 
+
+
+
+COMPONENT: CounterHistory + HistoryItem
+
+What this component does
+
+It shows a list of previous counter values.
+
+Each value is clickable.
+
+When clicked, the item gets selected (highlighted).
+
+What props it receives
+
+CounterHistory receives:
+
+history → an array of numbers.
+
+Example:
+history = [1, 2, 3, 4]
+
+HistoryItem receives:
+
+count → a single number from the history array.
+
+What state it uses
+
+Only HistoryItem uses state.
+
+const [selected, setSelected] = useState(false);
+
+selected → stores whether item is selected.
+
+Default value is false.
+
+Important logic inside
+
+A) handleClick function:
+
+setSelected(prevSelected => !prevSelected);
+
+Toggles selection.
+
+If false → becomes true.
+
+If true → becomes false.
+
+B) history.map():
+
+history.map((count, index) => (
+<HistoryItem key={index} count={count} />
+))
+
+Loops through history array.
+
+Creates one HistoryItem per value.
+
+What it renders
+
+An ordered list (<ol>)
+
+Inside it, multiple <li> elements
+
+Each <li> shows one counter value.
+
+If selected is true:
+className = "selected"
+
+If selected is false:
+className = undefined
+
+Each item manages its own state independently.
+
+Important Concept
+
+Every HistoryItem has its own state.
+
+Clicking one item does NOT affect others.
+
+Each item re-renders separately.
+
+
+--------------------------------------------------------------
+
+COMPONENT: CounterOutput
+
+What this component does
+
+It displays the current counter value.
+
+It changes styling if the value is negative.
+
+What props it receives
+
+It receives:
+
+value → the current counter number.
+
+Example:
+value = 5
+value = -2
+
+What state it uses
+
+This component does NOT use any state.
+
+It is a simple presentational component.
+
+Important logic inside
+
+A) Logging:
+
+log('<CounterOutput /> rendered', 2);
+
+Used to track when component re-renders.
+
+B) Conditional CSS:
+
+const cssClass = value >= 0
+? 'counter-output'
+: 'counter-output negative';
+
+If value is 0 or positive → normal style.
+
+If value is negative → adds "negative" class.
+
+What it renders
+
+A <span> element.
+
+Displays the value inside it.
+
+Applies class based on whether value is negative or not.
+
+Example output:
+
+<span class="counter-output">5</span>
+
+<span class="counter-output negative">-2</span>
+
+--------------------------------------------------------
+
+
