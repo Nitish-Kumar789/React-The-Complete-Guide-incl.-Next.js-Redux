@@ -1,0 +1,22 @@
+so in this last section of code 
+we will be focussing more on the overall status 
+like how many questions were skipped, answered correctly, answered incorrectly, 
+,all questions and all answers 
+
+we will basically fetch all Questions and Answers dynamically and will render that 
+
+syntax of map 
+
+<ol>
+{stateVariable.map((variableValue, index) => {<li key = {index+1}>{var}</li>})}
+
+</ol>
+
+
+filter is a fature of js, it will create a new array based on some condition 
+
+it won't affect orginial array 
+
+array.filter((item) => {return (condition)})
+array.filter((item) => condition) mostly used 
+array.filter((item) => (condition))
