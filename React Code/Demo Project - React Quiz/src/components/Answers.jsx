@@ -22,7 +22,7 @@ export default function Answers({
           cssClass = "selected";
         }
 
-        if (answerState === "correct" || (answerState == "wrong" && isSelected))
+        if ((answerState === "correct" || answerState == "wrong") && isSelected)
           cssClass = answerState;
         return (
           <li key={answer} className="answer">

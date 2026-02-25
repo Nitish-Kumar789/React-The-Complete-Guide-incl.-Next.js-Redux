@@ -1,0 +1,11 @@
+Now Issue is that, if we select the answer lately 
+in that case whats happening is that its causign issue 
+reason being let suppose at end moment we are selecting some answer 
+
+let suppose we are having time of 10 sec for each question 
+
+after selection of 1 sec we will get correct or wrong 
+and after netx 2 sec we will be moved to next 
+sec and let suppose we don't have that much time 
+
+in this tutorial we will be selecting mode value to change the css class 
