@@ -1,0 +1,9 @@
+React DevTools Profiler is a tool used to analyze how and when React components render.
+
+It helps identify unnecessary or repeated component executions.
+
+It shows which components rendered and how long each render took.
+
+It helps detect performance issues caused by state, props, or parent re-renders.
+
+It is mainly used to optimize React applications and improve performance.
