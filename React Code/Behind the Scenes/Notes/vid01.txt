@@ -1,0 +1,4 @@
+In this tutorial generally explained how component are rendered 
+how dom is updated with minimal change 
+
+how state value is presereved, how function is created thats all 
