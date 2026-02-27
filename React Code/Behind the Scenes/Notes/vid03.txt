@@ -1,0 +1,19 @@
+Without memo:
+
+Component executes
+React compares DOM
+DOM may not update
+
+With memo:
+
+Component doesn’t execute
+React skips comparison
+Faster performance
+
+There are 2 different things:
+
+Component Function Execution
+
+DOM Update
+
+React.memo affects component execution, not DOM diffing.
