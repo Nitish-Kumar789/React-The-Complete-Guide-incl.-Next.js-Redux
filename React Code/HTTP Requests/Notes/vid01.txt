@@ -1,0 +1,7 @@
+Here we will fetch data from some external server 
+
+
+We will learn about : 
+How to connect to a backend/Database
+Fetching Data 
+Sending Data 
