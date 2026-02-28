@@ -9,3 +9,8 @@ so for parent function we will be usign memo
 and for to memoize a Value we will use 'useMemo' and to memoizes a function we will use 
 'useCallback'
 
+how to use useMemo 
+
+import {useMemo} from "react" 
+
+const val = useMemo( function(input_val), [input_val] )

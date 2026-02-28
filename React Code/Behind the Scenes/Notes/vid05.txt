@@ -10,7 +10,7 @@ the function as value to ConfigureCounter which it will update with the new valu
 
 in oreder to avoid re-creation of function what we can do is that 
 we can simply, use useCallback 
-const fn_name useCallback(function fn_name(){} , [])4
+const fn_name useCallback(function fn_name(){} , [])
 
 how to use memo
 
