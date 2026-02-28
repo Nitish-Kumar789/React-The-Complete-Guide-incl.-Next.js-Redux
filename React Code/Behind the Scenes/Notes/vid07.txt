@@ -1,0 +1,29 @@
+✅ How React Virtual DOM Works
+
+React creates a Virtual DOM (a lightweight copy of the real DOM in memory).
+
+When state or props change, React:
+
+Creates a new Virtual DOM snapshot
+
+Keeps the previous snapshot
+
+React compares:
+
+Previous Virtual DOM
+
+New Virtual DOM
+This process is called Diffing
+
+After comparing, React:
+
+Finds the minimum changes
+
+Updates only those parts in the Real DOM (browser DOM)
+This process is called Reconciliation
+
+🔥 Correction
+
+It does NOT continuously create snapshots.
+
+It only creates a new snapshot when state or props change (like useState, useReducer, context update, etc.).
