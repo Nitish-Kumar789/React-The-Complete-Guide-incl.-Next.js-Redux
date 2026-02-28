@@ -1,0 +1,6 @@
+so what we can do is that we can simply handle error 
+if there is any error 
+error can be at any steps 
+
+so for error its import to have one UI to show the error mesasge 
+for that only we are having Error.jsx component 
