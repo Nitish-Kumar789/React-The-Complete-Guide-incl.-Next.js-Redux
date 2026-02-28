@@ -1,0 +1,52 @@
+one way to make component smart is to use memo other option is to use sepearate component 
+
+
+so whats the plan: 
+we will be making one sepearte ConfiguteCounter.jsx file 
+where we will be setting the value 
+and theat value will be passed to app.jsx 
+and that can be further passed to counte component and name will be chosenCount 
+
+so anyhow, in app.jsx chosenCount value should be passed 
+since we are using state variable in child component 
+so we have to pass that value to parent component 
+we can use that using state lift up 
+
+
+we can make one function in app.jsx 
+that will update the state value 
+
+and that function will be getting some params of value 
+
+and for that we will call the child component 
+and pass that function 
+rough: 
+
+import {useState} from 'react'
+
+const [chosenCount, setChosenCount] = useState(0)
+function handleChange(val)
+{
+    setChosenCount(val)
+}
+
+passing function as a value 
+
+<ConfiguteCounter onSet = {handleChange}/>
+
+
+in ConfigureCounter
+
+export default function ConfigureCounter({onSet})
+{
+
+function handleSet()
+{
+    onSet(10)
+}
+
+}
+
+
+so is it like onSet = {hanldeSetCount}
+ Meaans onSet equals function handleSetCount(newCount) { setChosenCount(newCount); }
