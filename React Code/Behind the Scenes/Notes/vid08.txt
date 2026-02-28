@@ -1,0 +1,14 @@
+Let suppose if we have same component multiple times 
+in that case every component will be having different memory 
+and won't affect each other
+if we are chaning the state value in child component 
+
+
+position also plays a crucial role, so what can be done 
+so its better to attach some key with each element 
+so that while rendering let suppose use map
+key will that unique id 
+
+we can generate key  for that element using Math.Random() * 1000; 
+
+thats it 
