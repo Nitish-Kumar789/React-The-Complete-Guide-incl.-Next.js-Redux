@@ -1,0 +1,48 @@
+Let suppose we are passing some value from parent to child component 
+
+let suppose 
+parent component
+
+const [enteredNumber, setEnteredNumber] = useState(0)
+
+function handleEnteredNumber()
+{
+    setEnteredNumber((preVal) => preVal+ 1)
+}
+<Child val = {enteredNumber}>
+
+
+
+child component:
+
+export default function Child({val})
+{
+
+
+    const ifCorrect =  helper(val);
+
+}
+
+and let suppose enteredNumber is changing 
+in that case again component will be re-rendered
+and will check for all elements which got updated 
+since child component is receving updated props  so for sure 
+child component will be re-executed 
+
+so child component will be getting new value and 
+and since helper depends on val that is at end enteredNumber
+so helper function will be also executed again 
+
+
+
+If we wants to resetting the child component then in that case 
+we can simply add key prop in parent component 
+
+Using key to Reset a Component
+
+In React, when the key changes, React:
+
+Unmounts the old component
+Mounts a completely new one
+All state inside gets reset
+That’s how we force a reset.
