@@ -1,0 +1,128 @@
+✅ 1. fetch() and React
+
+✔ Correct:
+
+fetch() is not provided by React.
+
+It is a JavaScript Web API (browser feature).
+
+It is used to GET, POST, PUT, DELETE data.
+
+It returns a Promise.
+
+✅ 2. Promise Concept
+
+✔ Correct:
+fetch() returns a Promise.
+So:
+
+When data is returned → .then() runs
+
+If error happens → .catch() runs
+
+Example:
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+⚠ 3. Async Component in React
+
+You wrote:
+
+export default async function Component() {
+  const val = await fetch();
+}
+
+❌ This is NOT allowed in normal React components (Client Components).
+
+React components must return JSX, not a Promise.
+
+✅ Correct Way (Client Side React)
+
+We use useEffect():
+
+import { useEffect, useState } from "react";
+
+export default function Component() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/places")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
+
+  return <div>{data.length}</div>;
+}
+
+✔ This is the correct pattern.
+
+⚠ 4. Small Correction in Your Statement
+
+You wrote:
+
+async is not allowed by react
+
+More accurate version:
+
+❌ Async is not allowed directly in normal client components
+
+✅ But async is allowed in:
+
+Next.js Server Components
+
+Backend (Node.js)
+
+Inside useEffect
+
+✅ 5. JSON Format
+
+You wrote:
+
+[
+  {"id" : "p1", "place" : "abc", "lat" : 13},
+  {"id" : "p2", "place" : "xyz", "lat" : 31}
+]
+
+✔ 100% Correct.
+
+Rules of JSON:
+
+Keys must be in double quotes
+
+String values must be in double quotes
+
+Numbers don’t need quotes
+
+It supports:
+
+Object
+
+Array
+
+String
+
+Number
+
+Boolean
+
+null
+
+✅ 6. Important Extra Point
+
+When you do:
+
+fetch("http://localhost:3000/places")
+
+First promise → gives Response object
+
+Second step → response.json() converts body to JS object
+
+Because fetch does NOT automatically convert JSON.
