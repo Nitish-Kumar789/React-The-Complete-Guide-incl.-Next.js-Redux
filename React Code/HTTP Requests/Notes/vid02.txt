@@ -1,0 +1,16 @@
+with react, you build a client-side web application( = its runs in the broswer)
+
+You communicate with a backend (API) via HTTP Requests
+
+You should not try to connect to a database directly ( -> Credentials would be exposed)
+
+Frontend(React App) & Backend(API) are often sepearated( =seperate projects)
+
+You can build a fullstack React app (=blend frontend & backend) via NextJs or Remix 
+
+
+So Backend is like a middleman between Frontend and Datatabse 
+you can send the HTTP Request to ask for some operation
+but that is also already pre-defined 
+
+
