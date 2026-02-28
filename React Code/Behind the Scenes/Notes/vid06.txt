@@ -1,0 +1,11 @@
+so the thing is that, here we have few things 
+on every re-render 
+
+component function will be re-executed 
+so for that 
+parent function will be re-executed and all child function will be re-created 
+
+so for parent function we will be usign memo 
+and for to memoize a Value we will use 'useMemo' and to memoizes a function we will use 
+'useCallback'
+
