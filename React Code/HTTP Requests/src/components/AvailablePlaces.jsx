@@ -1,10 +1,23 @@
-import Places from './Places.jsx';
+import { useState, useEffect } from "react";
+import Places from "./Places.jsx";
 
 export default function AvailablePlaces({ onSelectPlace }) {
+  const [AvailablePlaces, setAvailablePlaces] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/places")
+      .then((reponse) => {
+        return reponse.json();
+      })
+      .then((resData) => {
+        setAvailablePlaces(resData.places);
+      });
+  }, []);
+
   return (
     <Places
       title="Available Places"
-      places={[]}
+      places={AvailablePlaces}
       fallbackText="No places available."
       onSelectPlace={onSelectPlace}
     />

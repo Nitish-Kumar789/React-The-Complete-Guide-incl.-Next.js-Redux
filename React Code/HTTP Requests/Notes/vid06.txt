@@ -1,0 +1,22 @@
+Here we have access to backend, but we shoudn't direcly use it 
+but instead we should be using some api call to fetch the data 
+
+
+const [availablePlaces, setAvailablePlace] = useState([])
+
+const res = fetch("http//localhost:3000/places").then((response) => {
+
+return response.json()
+}).then((resData) => {
+    setAvailablePlace(resData.places)
+})
+
+since we are setting the state variable 
+so again component will re-render -> will cause infinite loop problem 
+solution: 
+use useEffect
+useEffect(() => {res}, [])
+--------------
+for image, we don't have any route 
+so what we can do is that :
+just add localhost:300/ then remaining path 
