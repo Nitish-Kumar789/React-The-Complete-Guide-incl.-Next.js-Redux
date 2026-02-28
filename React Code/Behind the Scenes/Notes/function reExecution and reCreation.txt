@@ -1,0 +1,69 @@
+n React Component
+
+When component renders:
+
+function Parent() {
+  const handleClick = () => {
+    console.log("clicked");
+  };
+
+  return <button onClick={handleClick}>Click</button>;
+}
+
+On every render:
+
+Parent function re-executes.
+
+handleClick function is re-created.
+
+New memory reference is created.
+
+That is why memoized children may re-render.
+
+4️⃣ Simple Difference
+
+Re-execution
+= Running the function again.
+
+Re-creation
+= Creating a new function object in memory.
+
+5️⃣ Important in React
+
+When state changes:
+
+Component function re-executes.
+
+All functions defined inside are re-created.
+
+State is preserved separately by React.
+
+That is why we use:
+
+useCallback
+To prevent re-creation of functions.
+
+Final Simple Understanding
+
+Re-execution = Running
+Re-creation = New memory reference
+
+In React, both happen during re-render unless optimized.
+
+------------------------------------------------
+
+You said:
+
+memo is to stop reexecution of counter function
+useCallback is to stop recreation of handleDecreament function
+
+✅ Conceptually correct.
+⚠️ But remember: memo only works when props stay same.
+⚠️ useCallback only matters when function is passed down.
+
+On every re-render two things can happen 
+01.re-execution of Component function 
+02.re-creation of nested function 
+
+
+Re-execution causes re-creation.
