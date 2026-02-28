@@ -1,0 +1,12 @@
+Previously, we used to get data from our local storage 
+but now we will be fetching data from backend server 
+that may take milliseconds or even seconds
+
+to start the backend server, follow below steps: 
+step01: start new terminal 
+step02: cd '.\backend'
+step03: npm install 
+step04: node app.js 
+
+
+
