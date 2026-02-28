@@ -1,0 +1,36 @@
+state batching
+
+let suppose we hav something like 
+
+const [enteredNumber1,setEnteredNumber1] = useState(0);
+const [enteredNumber2,setEnteredNumber2] = useState(0);
+const [enteredNumber3,setEnteredNumber3] = useState(0);
+
+function handleEnteredNumber12(newCount)
+{
+    setEnteredNumber(newCount+1);
+    console.log(enteredNumber1);
+    setEnteredNumber2(newCount + 2)
+
+}
+function handleEnteredNumber3(newCount)
+{
+    setEnteredNumber3(newCount + 3)
+}
+
+so the bottom line is that state variable won't be change at that moment
+instead it will be schedule to be executed after some time 
+after that time component will be re-rendered and then only value will be updated to new value 
+
+other thing is that 
+once react will loook for all state variable and do batching for resheduling and after that time 
+all value will be updated 
+
+
+thats why its always best practict to get update value as this 
+
+function handleEnteredNumber()
+{
+    // this ensure setEnteredNumber always get latest snapshot of enteredNumber and will update accordingly 
+    setEnteredNumber((preVal) => { return (preVal + 1);});
+}
