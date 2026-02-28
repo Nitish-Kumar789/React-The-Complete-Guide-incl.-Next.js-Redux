@@ -1,0 +1,24 @@
+so whats happening is that 
+when we are changing the value from UI 
+in that case state variable got changed that is enteredNumber got change
+
+Counter component is passing chosenCount as props to child 
+
+and chosenCount is set up by ConfigureCounter component as we are passing 
+the function as value to ConfigureCounter which it will update with the new value of enteredNumber 
+
+
+in oreder to avoid re-creation of function what we can do is that 
+we can simply, use useCallback 
+const fn_name useCallback(function fn_name(){} , [])4
+
+how to use memo
+
+import {memo} from "react" 
+const Component_name =  memo(function Component_name(){})
+
+export default Component_name;
+
+
+=> if enteredValue in ConfigureCounter is changed will it affect Counter ?
+no 
