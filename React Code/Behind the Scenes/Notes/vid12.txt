@@ -1,0 +1,11 @@
+we have another plugins 
+million js 
+which improves performance by 70% 
+simply follow the guidlines and you are good to go 
+so what you can do is that 
+
+there will be few component which need to be ignore 
+for that we can simply write 
+
+
+//million js 
