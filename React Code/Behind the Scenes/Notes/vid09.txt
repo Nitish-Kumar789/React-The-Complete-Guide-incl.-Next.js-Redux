@@ -1,0 +1,19 @@
+If we pass key from parent then its better 
+reason being is that entire list doesn' get updated by DOM 
+if we use sth like 
+
+<ol>
+state_variable.map((element, key ) => {return <li key = { key}>{element} </li> })
+</ol>
+
+
+in that case "Using index as key can cause incorrect
+ reconciliation when elements are 
+inserted at the beginning or reordered." 
+
+reconciliation => React Diffing Algorithm 
+
+Reconciliation is the process React uses to decide:
+
+“What changed in the UI, and what exactly 
+should I update in the real DOM?”
