@@ -1,0 +1,39 @@
+Let suppose if our network is slow 
+in that case there shoudl be some fallback text 
+
+for that, we will use one state to check if data is fetched or not 
+
+so we can do sth like 
+
+const [fetchData, setFetchData] = useState(false);
+
+
+useEffect(() => {
+    setFetchData(false);
+    async function handleData()
+    {
+        const response = 
+        const resData = 
+        setAvailablePlace(resData.places);
+
+        setFetchData(true);
+    }
+
+    handleData();
+    
+
+})
+
+
+
+
+in jsx 
+
+
+isloading = {fetchData}
+
+
+
+
+
+in availablePlaces component we will recevie two prop isloadin and fallback test 
