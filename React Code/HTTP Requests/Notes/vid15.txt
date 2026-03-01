@@ -1,0 +1,2 @@
+Now in this tutorial, what we will be doing 
+we will show the data that is stored in user-places.json file to UI 
