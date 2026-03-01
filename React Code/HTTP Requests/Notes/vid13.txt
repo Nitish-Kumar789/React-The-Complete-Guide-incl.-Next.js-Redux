@@ -1,0 +1,12 @@
+so things are correct but few changes need to incoporated 
+in app.js 
+
+function handleSelectPlace(selectedPlace) 
+
+first it is updating the ui 
+and then doing api call 
+if let suppose 
+if it failed 
+so for that we need to reupdate the ui 
+using old state and oter thing is that 
+we also need to add one modal to show ui for error 
