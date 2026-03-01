@@ -1,0 +1,120 @@
+In React, Promise, async, and await are not React features.
+They are JavaScript features used to handle asynchronous operations like API calls.
+
+Since you work with MERN stack, this is very important for frontend + backend communication.
+
+1️⃣ Promise (JavaScript)
+
+A Promise represents a value that will be available in the future.
+
+It has 3 states:
+
+Pending
+
+Resolved (fulfilled)
+
+Rejected
+
+Example:
+const data = fetch("https://api.example.com/users");
+
+data
+  .then((res) => res.json())
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error));
+
+fetch() returns a Promise.
+
+2️⃣ async and await (Cleaner way of handling Promises)
+
+Instead of .then(), we use async/await.
+
+Example:
+async function getData() {
+  try {
+    const res = await fetch("https://api.example.com/users");
+    const result = await res.json();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+Important:
+
+async makes a function return a Promise.
+
+await pauses execution until Promise resolves.
+
+await can only be used inside async function.
+
+3️⃣ How It Works in React
+
+In React components, we cannot make component function async directly.
+
+❌ Wrong:
+
+export default async function Component() {
+  const data = await fetch(...);  // Not allowed
+}
+
+React components must return JSX synchronously.
+
+4️⃣ Correct Way in React (Using useEffect)
+
+We fetch data inside useEffect.
+
+import { useEffect, useState } from "react";
+
+function Component() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch("https://api.example.com/users");
+      const result = await res.json();
+      setData(result);
+    }
+
+    fetchData();
+  }, []);
+
+  return <div>{data.length}</div>;
+}
+Why this works:
+
+useEffect runs after render
+
+API call is side-effect
+
+State update triggers re-render
+
+5️⃣ Why React Doesn’t Allow Async Component?
+
+Because React expects:
+
+Component() → return JSX immediately
+
+If async:
+
+Component() → wait → return JSX
+
+This breaks rendering flow.
+
+(React Server Components are different, but in normal client components — not allowed.)
+
+6️⃣ Quick Comparison
+Feature	What It Is	Used For
+Promise	JS object	Handle async result
+async	Function modifier	Makes function return Promise
+await	Keyword	Wait for Promise result
+7️⃣ Real Life Flow in MERN
+
+Frontend:
+
+React → fetch() → Backend API
+
+Backend:
+
+Node → DB query (async) → send response
+
+Both sides use async/await.
