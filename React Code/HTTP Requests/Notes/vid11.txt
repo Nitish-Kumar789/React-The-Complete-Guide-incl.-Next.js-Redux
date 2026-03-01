@@ -1,0 +1,76 @@
+
+so we will put async operation(background operation) 
+in other file that file cann't be Component.jsx
+
+export dafault function Component()
+{
+
+}
+
+
+export dafault async function Component()
+{
+
+}
+// will throw error because since its async backround operation 
+it will take time to execut 
+but component function should return jsx element quickly, thats the reason 
+
+so we will make one normal js file and make that function async 
+like 
+
+
+// it will return promise 
+async function handleRequest ()
+    {
+
+    }
+
+and while calling
+
+await handleRequest()
+
+
+----------------------------------
+
+promise is an object that represents a value that will be available in the future 
+
+promise has 3 states: 
+01. Pending -> initial state 
+02. Fulfilled -> success 
+03. Rejected -> failed 
+
+
+If inside .then() you:
+
+return value → goes to next .then()
+
+throw error → goes to .catch()
+
+return Promise → next waits for it
+
+=> async function always return a promise 
+and to resolve that promise we will always use await 
+
+----------------------------------------
+
+order of execution is like: 
+first of all,  fetch will be called 
+and next all below lines of code will be halted which is part of async function[most important]
+once it is successful then value retured will be stored in response 
+then response.json() will be executed it will converted fethced data into json format 
+
+it is not any api cal then why await? 
+internally it is also promise [object that represents some value and to get that value we use the keyword await]
+
+
+untill data is not converted into json format all below operation will be halted  which is a part of async function 
+
+
+once resData is achieved 
+
+then will check if any errow while converting json format 
+that wil be handled by if block 
+
+of everything is correct then resData.places will be returned 
+
