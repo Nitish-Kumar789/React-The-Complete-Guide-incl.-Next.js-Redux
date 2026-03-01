@@ -1,0 +1,56 @@
+According to our requirement, we will be sorting place According to our location 
+for that broswer is providing us some method that will be returning object of latitude and longitude 
+
+
+all api call in async operation means promise so for that we need to use fetch,  async and await in useEffect 
+
+but for navigator its not promise so for this we cann't use fetch, async and awiat 
+
+navigator.geolocation.getCurrentPoisition((position) => {position.latitude, position.longitude})
+
+api call => will take time for sure  -> promise[value that will be available later] -> will be handled by async, await
+navigator[broswer faature] => will also take time -> not promise -> can't be handled by async, await
+
+
+so while setting state variable setisFetching(false) we will be put inside navigator after all async operation is successful 
+
+ because {} will only be executed afeter we get position object 
+and also in catch block like 
+
+async function fetchaPlaces()
+{
+    try{
+        // all code logic of Fetching
+        // all code logic of getting user location 
+    }
+    catch(Error)
+    {
+        setError({})
+        setisFetching(false);
+
+    }
+}
+
+
+
+Callback	Promise
+Function inside function	Object returned
+Can cause callback hell	Chainable
+Hard error handling	Easy .catch()
+Older pattern	Modern standard
+🧠 In Simple Words
+
+Callback → “Call this function when work is done.”
+Promise → “I promise I’ll give you value later.”
+
+
+
+navigator.geolocation.getCurrentPoisition() 
+this is callback[broswer based method] 
+
+Async (Asynchronous) means:
+
+Code does NOT block the main thread
+It runs in background and returns later.
+
+we can convert callback function into promise 
