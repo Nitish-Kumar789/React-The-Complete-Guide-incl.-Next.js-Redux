@@ -1,0 +1,40 @@
+so here we will check for the validation of email 
+one important catch 
+using new Form(event.target) 
+we can't achieve on every key stroke change 
+
+becasuse above work on after clicking on submit button 
+
+
+for every key stroke change 
+we can either use useState or useRef
+
+one important thing with useState we use event.target.value 
+with useRef we use event.current.value 
+
+
+lets go with useState
+
+
+so what we can check is that 
+
+export deafault function Login()
+{
+    const [enteredValue, setEnteredValue] = useState({
+            email: "", 
+            password : ""
+           })
+     const emailIsInvalid = enteredValue.email !== "" and 
+        !enteredValue.includes('@')
+
+
+    function handleSubmit(event)
+    {
+        
+       
+    }
+
+    {emailIsInvalid && <p> email is invalid  </p>}
+
+since emailIsInvalid is variable so it will be checked again and again 
+}
