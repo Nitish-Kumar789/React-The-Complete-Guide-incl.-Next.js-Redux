@@ -1,0 +1,14 @@
+here we will talk about the complexity of form handlig 
+
+there is basically two part 
+first one is form submission 
+where data can be handled by state, refs, browser method 
+
+
+and other part is input validation 
+
+validation on every key stroke 
+
+on lost focus 
+
+on click on submit button 
