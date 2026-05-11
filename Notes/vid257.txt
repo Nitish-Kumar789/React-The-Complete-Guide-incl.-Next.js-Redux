@@ -1,0 +1,46 @@
+we can handle form data using state, refs 
+
+but for these we have to write lots of code 
+that is not generally preffered 
+
+so here we have one method given by browser 
+to handle form data 
+
+here is one catch 
+let suppose we have one input field there we have multiple 
+input in that case we have to handle differentl 
+
+
+cons fd = new FormData(evet.target )
+const var_name = fd.getAll()l 
+const data  = Obect.fromEntries(fd.entries()); 
+data.var_name = var_name; 
+
+but only one constraint is that for each input there should be name feild 
+
+
+so template will be sth like 
+
+export deafault function SignUp()
+{
+
+    function handleSubmit(event)
+    {
+        event.defaultPrevent(); 
+
+    // fd represents all form data 
+        const fd  = new FormdData(event.target); 
+        const acquisitionChallen = fd.getAll("acquisition"); 
+
+/// data will be object will all key and value pair 
+        const data = Object.fromEntries(fd.entries()); 
+        data.acquisition = acquisitionChallen; 
+        console.log(data); 
+
+
+    }
+
+    return ( 
+        <form onSubmit = {handleSubmit}>
+    )
+}

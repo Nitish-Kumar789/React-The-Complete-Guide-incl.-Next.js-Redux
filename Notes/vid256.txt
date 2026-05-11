@@ -1,0 +1,26 @@
+another method is to use useRef 
+
+
+export default function Login()
+{
+
+    cont email = useRef();
+    const password = useRef();
+function handleSubmit(event)
+{
+    event.preventDefault();
+
+    console.log(email.current.value);
+    consoloe.log(password.current.value);
+}
+
+
+    return (
+
+        <form onSubmit={handleSubmit}>
+        
+        <   ref = {email}>
+        < ref ={password}> 
+        </form>
+    )
+}
