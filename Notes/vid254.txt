@@ -1,0 +1,65 @@
+here we will learn about form extractin and validation 
+first we will deal with extraction 
+
+
+=> in react we don't have for but we have htmlFor keyword 
+=> in react we don't have class but we have className keyword 
+
+
+few features of 
+form 
+
+if there is any button 
+inside form 
+then by deafault there type will be submit 
+and when you click on that button 
+then automatically that form will be submitted to server and 
+page will be refreshed 
+
+thats the problem 
+
+so we have here two approach to solve that issue 
+
+
+Login.jsx 
+
+export deafault function Login()
+{
+
+    function handleSubmit()
+    {
+        console.log("submitted")
+    }
+return(
+    <form>
+
+    <p>
+    <button > Reset</button>
+<button type = "button" className = "button" onClick = {handleSubmit}> Login</button>
+
+    </P>
+
+
+    </form>)
+}
+
+
+export deafault function Login()
+{
+
+function handleSubmit(event)
+{
+    event.preventDefault(); 
+    console.log("submitted")
+}
+    return(<form onSubmit = {handleSubmit}>
+
+    <p>
+    <button > Reset</button>
+<button  className = "button"> Login</button>
+
+    </P>
+
+
+    </form>)
+}
