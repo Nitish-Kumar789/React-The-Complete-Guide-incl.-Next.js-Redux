@@ -1,0 +1,13 @@
+there are few rules of hoooks: 
+
+01. only call hooks insde of component function 
+
+02. we will use hook without nesting it 
+
+means that we can only define hook inside react component at top level it shouldn't be inside any if statement or any looping statement
+
+but we will tweak the first rule 
+
+now we will attempt to deine the hook inside the function 
+so that we can use it at various place 
+just like we do with react component
