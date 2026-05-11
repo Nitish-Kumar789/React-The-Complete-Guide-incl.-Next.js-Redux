@@ -1,0 +1,28 @@
+so the thing is here that 
+
+
+in form button can be of type 
+"button" 
+"submit" -> by deafault behaviour  
+"reset"
+
+if we put reset as type then after clicking on that button
+form will rest 
+
+anotehr method is 
+
+export default function SignUp()
+{
+
+    function handleSubmit(event)
+    {
+        event.preventDefault(); 
+
+        const fd =  new Form(event.target);
+        
+        const data =  Object.fromEntries(fd.entries());
+        
+        event.target.reset(); 
+
+    }
+}
