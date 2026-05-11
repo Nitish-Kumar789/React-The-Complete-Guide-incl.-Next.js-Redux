@@ -1,0 +1,9 @@
+so the most important thing is that
+along with state function we can also export state variable 
+
+that the main point 
+
+if there is two component that is using the samea hook 
+then for both a seperate state snapshot will be created 
+
+so there won't be any interference 
