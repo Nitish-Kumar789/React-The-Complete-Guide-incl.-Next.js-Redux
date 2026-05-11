@@ -1,0 +1,29 @@
+here we have lots of things to conver 
+
+there is one convectino method to handle multiple states 
+
+one new method 
+
+const [enteredValue, setEnteredValue] = useState({
+    "email" : "",
+    "password" : ""
+})
+
+
+function handleEnteredValue(identifier, event)
+{
+
+    setEnteredValue((prevValue) => ({
+        ...prevValue,
+        [identifier] : event.targetValue
+    }))
+}
+
+
+
+
+from other part we can cal as 
+
+onChange = {(event) => handleEnteredValue("email", event.target.vaue)}
+
+value = {enteredValue.email}
