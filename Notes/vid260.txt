@@ -1,0 +1,11 @@
+so basically here we will go with validation of email id 
+for that again 
+we will make one state 
+
+initially vlaue will be false 
+
+here is the concept of autofocus 
+
+if user is editing then we won't check 
+
+if it clicks awya then only we will check 
