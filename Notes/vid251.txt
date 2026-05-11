@@ -1,0 +1,23 @@
+so the thing is that 
+let suppose we have two function two to deal with 
+
+in that case 
+we will make one function as primay function in the same file 
+
+and call another function inside that 
+
+and in hook since we have await fn_call()
+so we will return the promise 
+
+
+async function fetchsortedPlaces() {
+     
+     const places = await fetchAvailablePlace(); 
+     return new Promise(
+(resolve) =>{
+    ...
+}
+}
+
+     );
+}
