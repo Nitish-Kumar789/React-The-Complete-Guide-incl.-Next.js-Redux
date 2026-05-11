@@ -1,0 +1,25 @@
+same first we modified app.js file 
+
+now we will modify the available place 
+
+but here we have hack that how to use sorting logic here 
+
+
+same we will import the file 
+
+
+
+import {useFetch} from "../path"
+
+const {} = useFetch(fetchUserPlace, [])
+
+and the hack is 
+
+import {sortPlaceByDistace} from "./path"
+
+import {fetchAvailablePlace} form "./path"
+
+
+fetchAvailablePlace will pass into function 
+
+
