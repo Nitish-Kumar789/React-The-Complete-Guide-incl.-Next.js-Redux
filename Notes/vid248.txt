@@ -1,0 +1,59 @@
+so its more like function only nothing too complex 
+
+instead what we are doing here is that 
+
+like function has 
+some input prams, output prams 
+
+so in the custom hook we will take some input, may be for some state
+we will define all states here 
+and we will write like 
+
+in the return we will return all state as object 
+and then we can use it simply 
+
+
+
+
+export function 
+
+
+return {}
+
+one thing more we can also change the name of satete 
+
+const {a, b, c : x } = useFetch()
+
+so 
+
+
+export function useFetch(somefn, soneinitialvalue)
+{
+    const [] = useState(); 
+    const [] = useState(); 
+    const [] = useState(); 
+
+    useEffect(() => {
+        async  function fetchPlaces() {
+
+            try{
+
+            }
+            catch{}
+        }
+
+    }, [fetchPlaces])
+}
+
+in the Dependencies array we will add function name 
+simple reason beign wheneve that function will chnage 
+here it will be called 
+adn most important thign 
+
+wherever we are using custom hook 
+if state change there also 
+then whole this component will re-execute 
+
+
+we can use it as 
+const {isFethcin error, fetchedData: xyz } = useFetch(fetchUserPlace, [])
