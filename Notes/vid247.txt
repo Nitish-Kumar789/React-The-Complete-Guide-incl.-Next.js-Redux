@@ -1,0 +1,10 @@
+Ho here we will make one folder names hooks 
+where we will define custom hook
+here are few Important things 
+
+name of custom hook should be useXyz() something 
+hook is basically a react function with use keyword as prefix 
+
+so when you use 'use'  basically react understand it as hook 
+and hook must be defined inside react component or custom hook 
+thats the rule 
