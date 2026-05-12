@@ -1,0 +1,30 @@
+since we are making out component leaner 
+
+so for that reason 
+we will make one seperaet file for checks 
+and name will be validation.js 
+
+remember not jsx 
+so format will be like 
+
+export function isEmail(value)
+{
+    return value.includes('@); 
+}
+
+export function isNotEmpty(value)
+{
+    return value.trim!= '';
+}
+
+only function will 
+be tehre 
+
+
+
+and in the main file 
+we can import as 
+import {fn1,fn2,fn3} from "./path"
+
+
+!fn1(enteredValue.email)
