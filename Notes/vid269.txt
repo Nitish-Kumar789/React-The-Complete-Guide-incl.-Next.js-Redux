@@ -1,0 +1,36 @@
+so what actually is form actions? 
+
+QN: here we have only two file
+01. Header.jsx 
+02. Signup.jsx
+--------------------
+
+the things that we can do here is that 
+
+
+export default function Signup()
+{
+    function handleSignUpActions(formData)
+    {
+        const email = formData.get("email")
+        console.log(email); 
+
+    }
+
+
+    return (
+
+        <form action = {handleSignUpActions}></form>
+    )
+}
+
+so the thign is here is that 
+every element should have name attribute
+action is present everywhere with form 
+may be in react  or may be in html 
+
+props is term used in react 
+
+action by default refers to path for redirection 
+but in react action will be sued to pass form data 
+
