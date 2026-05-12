@@ -1,0 +1,8 @@
+Here we will learn about form actions 
+
+we have two things 
+form submission and form validation 
+
+that we already saw using customised method 
+
+now we will use form actions - react way of handling forms 
