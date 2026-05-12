@@ -1,0 +1,46 @@
+this is also relatively easy 
+
+along with the built in logic of browser method 
+we can also add our code for extra functionality 
+
+like check if password is matches or not 
+
+so as usual 
+
+there will be one function + state variable
+
+in tha function we will fetch the input value 
+and then update the state variable
+
+and as state variable is updated component will re -rendered 
+
+let: 
+
+const [passwordIsNotSame, setPasswordIsNotSame] = useState(false); 
+
+function handleSubmit(evetn)
+{
+   const fd = new Form(event.target);
+    const data = Object.fromEntries(fd.entries()); 
+
+    if(data.password != data.['confirm-password'])
+    setPasswordIsNotSame(true);
+}
+
+
+
+
+
+<div clasName= "" > {passwordIsNotSame && <p>Please Enter Same Password</p>}</div>
+
+here is one hack 
+generally 
+we do 
+
+data.name 
+
+but let suppose if we have name as sth like 
+confirm-password
+in that case 
+we will write as 
+data.['confirm-password']
