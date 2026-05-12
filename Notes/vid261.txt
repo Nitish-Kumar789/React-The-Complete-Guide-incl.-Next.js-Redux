@@ -1,0 +1,54 @@
+so the thing is that here we have multiple things to cover 
+
+we can check validation logic for every key strokes 
+
+but at end for form submission it must 
+
+we can use useState, useRef, focus method 
+useRef also use useState
+
+
+export default function Login()
+{
+const email = useRef(); 
+const password = useRef(); 
+
+const [emailIsInvalid, setEmailIsInvalid] = useState(false);
+
+
+
+    function handleSubmit(event)
+    {
+
+        event.preventDefault();
+        email = email.current.value;
+        password  = password.current.value;  
+
+        cost emailIsValid = email.includes('@'); 
+
+        if(!emailIsInvalid)
+        {
+            setEmailIsInvalid((true)); 
+            return ; 
+        }
+
+        setEmailIsInvalid(false); 
+
+        console.log("Form is submiited"); 
+
+        
+
+    }
+
+    return (
+
+        <form onSubmit = {handleSubmit}>
+
+        <input type  ="email" ref = {email}>
+        <input type = "password" ref = {password}> 
+
+        <div>{emailIsInvalid && <p > Please enter valid email id</p}></div>
+
+        </form>
+    )
+}
