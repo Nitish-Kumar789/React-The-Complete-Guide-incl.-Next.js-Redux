@@ -14,7 +14,7 @@ export function isEmail(value)
 
 export function isNotEmpty(value)
 {
-    return value.trim!= '';
+    return value.trim != '';
 }
 
 only function will 
