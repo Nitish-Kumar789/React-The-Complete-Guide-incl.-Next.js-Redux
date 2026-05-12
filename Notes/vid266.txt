@@ -1,0 +1,76 @@
+if we have multiple state function in a single file 
+then we cann't put all in single file 
+as it make code more complex 
+instead we will outsource the logic 
+
+
+and since we have to put state function
+that can only be put insie custom hook
+
+convention: 
+name of file should be sth 
+useInput.js 
+
+-----------------
+export default function useInput()
+{
+
+    const [va1,setVar1] = useState()
+    const [var2,setVar2] = useState(); 
+
+    function1 ()
+    {
+
+    }
+
+    function2()
+    {
+
+
+    }
+
+    return {
+       value: var1, 
+        var2, 
+    
+
+    }
+}
+
+so whenever we are sendid sth 
+we can write 
+
+required_name : name 
+
+and we are receiving sth 
+we can write as 
+
+name : required_name2 
+
+in this section we will try to make only input at a time 
+
+that means sepeart for email and password 
+
+always remember we can pass anything to any function 
+
+so here we are only passing the function 
+
+thats it 
+
+export function useInput(defaultValue, validationFn)
+{
+
+const [enteredValue,setEnteredValue] = useState(defaultValue); 
+    const valueIsValid = validationFn(enteredValue)
+}
+
+
+and we can pass multiple function from org file as 
+
+
+useInput('', (value) => isEmail(value) && isNotEmpty(value)); 
+
+
+where isEmail and isNotEmpty is function imported from some 3rd file 
+
+
