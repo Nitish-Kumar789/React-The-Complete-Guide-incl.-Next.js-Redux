@@ -1,0 +1,20 @@
+so here we will think of a bit more 
+
+to make a code a bit leaner 
+
+so what we will do 
+since for email and password 
+code is almost same 
+
+so we will make a new component input.jsx 
+
+export default function Input({label, id, error, ...props})
+{
+}
+
+few things 
+we will try to make this Input component as flexible as much we can do 
+
+so common thing will be lable, id, error 
+and things which is specific to some element 
+will pass as props 
