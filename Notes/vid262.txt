@@ -1,0 +1,26 @@
+This  part is relatively easy 
+
+so what we are doing here is that 
+
+
+we have multiple ways of handling forms 
+
+but it always best to use browser based method to use 
+always better to use 
+
+for form submission or form validation 
+its always good idea to use browser based method 
+
+
+so what we can do 
+for every input filed 
+add type= "email/password" required 
+
+required is the soul 
+as soon as we click on submit button 
+it will check if input field satisfy the condition 
+
+with password we can set as 
+minLength = {6}
+
+like this way 
