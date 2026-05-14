@@ -1,0 +1,71 @@
+so the thing is that here we have multiple thigns 
+
+If we have errror 
+then we will retun oject of errors 
+and key will be errors and value will be errors 
+
+so we can return sth like this 
+
+let errors = []
+
+return {errors: errors}
+
+or simply return {errors}
+
+{} => object 
+key = erros 
+and value is errors array 
+
+02. here we have have concept of useAction State 
+
+so this will be useful to get the return value of 
+some function that we we are using 
+
+now template will be sth like tis 
+
+
+export default function Signup()
+{
+    function signUpAction(formData)
+    {
+        const emali = formData.get("email")
+
+    }
+
+
+
+
+    return (
+        <form action = {signUpAction}></form>
+    )
+}
+
+in this scenario if we have to return some vlaue 
+so in that case what we will do 
+is below: 
+
+
+export default function Signup()
+{
+    function signUpAction(prevFormState, formData)
+    {
+        const emali = formData.get("email")
+
+    }
+
+
+        const [formState,formAction] = useActionState(signUpAction, {errors: null })
+  
+
+    return (
+        <form action = {formAction}></form>
+    )
+
+
+    
+}
+
+
+formAction is basically signUpAction with some extra react functionality 
+
+and formState is basically in initiallu null value 

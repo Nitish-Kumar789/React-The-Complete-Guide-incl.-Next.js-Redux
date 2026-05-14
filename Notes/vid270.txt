@@ -1,0 +1,21 @@
+Here we will extract all data and check for validation of data 
+by importing function from validation.js 
+
+its very simple 
+
+const email = formData.get("email")
+
+const acquisitionChannel = formData.getAll("acquisition")
+
+
+since for acquisition name 
+we may have multiple answer 
+so acquisitionChannel will be array 
+and after that
+
+const errors = []
+
+if(!isEmail(email))
+{
+    errors.push("invalid email address" );
+}
