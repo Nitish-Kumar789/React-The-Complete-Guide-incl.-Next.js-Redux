@@ -1,0 +1,34 @@
+so the thing is that 
+what we want to achieve here is that 
+if we sth is wrong or value is not entered in htat case when we will lick on submit butotn
+it should thrrow some error and in the form 
+things should populate
+
+
+so what we can do here is that : 
+
+if (errors.length > 0)
+{
+
+    return { errors, enteredValues : {
+        email, 
+        password, 
+        confirmPassword, 
+        firstName, 
+        lastName, 
+        ... 
+    }}
+}
+
+
+
+
+so if there is some error in that 
+case we are retuning the object 
+
+it can be accessed as formState.enteredValues?.email 
+
+here we will set as 
+defaultValue for each element 
+? null check safety 
+thats it 
