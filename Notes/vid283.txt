@@ -1,0 +1,7 @@
+so here in this section 
+we will be making one food order app
+this will be frontend heavy webapp 
+there will be backend but no more detailing 
+
+
+and we will use all things that we have covered till now 
