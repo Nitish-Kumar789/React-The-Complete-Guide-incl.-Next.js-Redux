@@ -1,0 +1,28 @@
+so the thing here is that 
+
+there are few more things 
+
+in the comment section there is optino to upvote and downvote 
+
+for that we can put some function 
+so to notice that 
+
+most importat
+with form we can use action = {fn}
+
+same way with button also we can do the same thing like formAction = {fn1}
+
+
+
+export default function opinion()
+{
+    return (
+
+       <form>
+       <button formAction = {upvote}></button>
+       <button formAction = {downvote}></button>
+
+       </form> 
+    )
+
+}
