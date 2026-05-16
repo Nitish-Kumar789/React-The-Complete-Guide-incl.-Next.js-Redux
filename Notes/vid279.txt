@@ -1,0 +1,24 @@
+if there is any api call 
+we will definatey use await fetch()
+and function will be async 
+
+and better to hold like
+ const response = await fetch( ,{
+    method : "POST"
+ })
+
+ if(!response.ok)
+ {
+    return; 
+ }
+
+
+
+ and function which is using it also need to have async and await 
+
+for using context we can use 
+useContext or use like 
+
+import {use} fron 'react'
+
+const {upvoteOpinion, downvoteOpinion} = use(OpinionContext); 
