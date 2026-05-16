@@ -1,0 +1,7 @@
+so the thigng is that 
+for signupAction function 
+since it don't have any state inside it
+
+so we can safely move it out of the component 
+function for better optimisation 
+as this won't be executed on every component runs
