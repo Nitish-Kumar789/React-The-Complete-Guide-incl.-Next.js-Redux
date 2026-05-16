@@ -1,0 +1,27 @@
+So Here the thing is that 
+
+again we will do same thing here
+
+
+import {useActionState} from 'react' 
+
+export function NewOpinion()
+{
+
+
+    function shareOpinionAction(prevState, formData)
+    {
+
+
+        let errors = []
+    }
+
+    const [formState, formAction] = useActionState(shareOpinionAction, {
+        errors : null 
+    })
+
+    return (
+        <form action = {formAction}></form>
+
+    )
+}
