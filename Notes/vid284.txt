@@ -1,0 +1,9 @@
+We need a plan/basic layout to make this application 
+
+
+01. Add a header component
+02. Add the meals related component
+03. add cart logic 
+
+
+from css file also we cn get a lots of information for making this application 
