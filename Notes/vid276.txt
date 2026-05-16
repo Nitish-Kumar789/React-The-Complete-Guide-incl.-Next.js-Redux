@@ -1,0 +1,36 @@
+so mainly will api call 
+we generatlly use async with function 
+and await with method 
+
+this is method to make a function asynchronous 
+
+as api call may take more time 
+and other operation will be blocked for that time 
+
+its not mandate to use async and await keyword 
+
+we can also use fetch().then()
+
+function getUse()
+{
+    fetch("/url").then().catch()
+}
+
+but using async and await 
+
+Its better code readaiblity 
+
+using fetch().then() 
+fetch() will return promise which will be later handled by then block
+
+Promise is simply a js object and its value will be used later 
+--------------------
+so here if user click on submit the opinion that will be stored in state varialbe 
+and on refresh of page also 
+that value will still stored 
+
+now in next lectures
+we will focus on two things: 
+01. Submit button should be disabled while entering value 
+02. and for single entry there will be only once submit button 
+not two times 
