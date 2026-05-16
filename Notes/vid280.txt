@@ -1,0 +1,23 @@
+So basically what I am doing here is that 
+for better UI Performance 
+I will be using useActionState 
+
+
+here we generally mainly deals with function and state 
+
+
+
+import {useActionState} from 'react'
+
+
+const [upvoteFormState, upvoteformAction, upvotePending] = useActionState(upvoteAction)
+const [downvoteFormState, downvoteformAction, downvotePending] = useActionState(downvoteAction)
+
+
+return {
+    <form>
+    <button formAction = {upvoteformAction
+    }></button>
+    </form>
+}
+
