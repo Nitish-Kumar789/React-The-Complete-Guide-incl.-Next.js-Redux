@@ -1,0 +1,31 @@
+Here we will be dealing with one new state 
+that is useFormStatus 
+
+import {useFormStatus} form "react-dom"
+
+export default function Submit()
+{
+
+    const {pending} = useFormStatus(); 
+
+    return {
+        <p>
+        <button type = "submit" disabled = {pending}></button>
+        {pending ? "submittting..." : "submit" }
+        </p>
+
+
+    }
+}
+
+
+this is used to get status of form where it is attached 
+it is generally used in some component 
+
+
+pending value will be true 
+if we click on submit button 
+so basically this method, does
+if we click on submit button 
+for that moment submit button will be disabled 
+and name will be submittting
