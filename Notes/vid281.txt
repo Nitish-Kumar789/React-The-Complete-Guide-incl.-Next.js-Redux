@@ -1,0 +1,12 @@
+with form we have lots of state 
+one is useOptimistic 
+
+so the thing is that it temporarily update the UI and later will update in backend 
+
+
+
+import {useOptimistic} from 'react'
+
+
+
+const [optimisticVotes, setVotesOPtimistically] =  useOptimistic(votes, (prevVotes mode) => (mode == "up" ? prevVotes + 1: prevVotes - 1 ))
