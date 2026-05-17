@@ -1,0 +1,9 @@
+so the thing is that here we will create a modal 
+to show the modal when user click on addtocart button 
+
+so the thing is that 
+
+01. that component must be defined in index.html 
+02. since we want to open the modal from other component thata why will pass the open prop 
+03. To open the Modal, we will put that prop in depedency array 
+04. To take reference of modal we will use useRef 
