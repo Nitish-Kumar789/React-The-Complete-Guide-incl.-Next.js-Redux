@@ -1,0 +1,24 @@
+so Meals component will be responsible for getting data 
+from backend 
+the thing is here we don't ahve any server to post data 
+what we are doing here is that 
+we have made a json file 
+where data is manually entered 
+and we are fetching from other components 
+
+
+component cann'be be async function 
+thats why 
+
+export default function Meals()
+{
+    async function fetchMeals()
+    {
+        const respoinse = await fetch("htts://localhost:3000/meals)
+    }
+
+}
+
+we don't want this async function to be called every time 
+for that reason 
+we will put this function into useEffect()
