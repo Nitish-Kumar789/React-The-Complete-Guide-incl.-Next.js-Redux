@@ -1,0 +1,12 @@
+so the thing is that we will make a custom button component
+
+
+in component we can pass many props 
+
+children, textOly, className, ...props 
+
+
+if textOly is true 
+then for that button 
+when text will be there and by clicking on text we can do some other operation 
+
