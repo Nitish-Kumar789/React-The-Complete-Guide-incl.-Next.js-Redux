@@ -1,0 +1,6 @@
+
+
+01. label is also a input type with label we use htmlFor keyword 
+02. WE will make checkout page and there we will use Input component
+03. we will also chagne the progress when we click on checkout button 
+04. if user click on esc button that thing will also be handled 
