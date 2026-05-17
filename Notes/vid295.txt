@@ -1,0 +1,2 @@
+01. Validation is already done using required keyword 
+02. We will extract data using FormData
