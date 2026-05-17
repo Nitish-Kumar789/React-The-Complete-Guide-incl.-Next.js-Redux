@@ -1,0 +1,8 @@
+so to format the price value 
+again we will make a new component
+formatting.js 
+
+export const currectyFormatter = new Intl.NumberFormat('en-US', {
+    style : 'currency', 
+    Currency : 'USD'
+})
