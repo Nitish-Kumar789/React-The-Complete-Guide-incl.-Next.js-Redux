@@ -1,0 +1,2 @@
+For rendering every meal item we will be making one new component 
+and there we will render every details 
