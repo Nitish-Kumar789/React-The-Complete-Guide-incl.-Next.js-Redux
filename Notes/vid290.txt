@@ -1,0 +1,31 @@
+To avoid Prop Drilling 
+we wil use concept of context 
+
+
+we will wrap the component inside app component
+
+so that evey component or nested component will have access to value 
+passed to context function
+
+and we willl also use useReducer to manage state and function in advance way 
+
+mainly we will ceate a folder for context 
+let suppose 
+store 
+
+and file name is CartContext.jsx 
+
+but this is not a component function 
+
+here we will be having two export 
+
+one for cartcontext -> export defaul 
+and one for CartContextProvider -> export
+
+one thing more instead of using length for cartitems 
+
+we have to use reduce function -> which will return a single value 
+
+
+
+
