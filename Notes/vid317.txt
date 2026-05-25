@@ -1,0 +1,6 @@
+How To Work With Redux State Correctly
+
+so the thing is that 
+in Redux we always override the obeject 
+
+we are never update the existing state 
