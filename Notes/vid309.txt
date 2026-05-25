@@ -1,0 +1,8 @@
+Preparing a new Project
+
+
+there are few things
+redux can be also used with js or with react
+This is independent package 
+mainly has central data store 
+her we have reducer and subscriber
