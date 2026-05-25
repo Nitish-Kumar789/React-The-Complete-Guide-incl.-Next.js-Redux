@@ -1,0 +1,42 @@
+So here we have multiple things 
+
+we have to point reducer and subscriber to data store 
+
+
+
+subscriber will first subscribe to data store 
+and also dispatch action 
+
+
+whenever data changes subscriber will automatically get the latest data 
+
+
+for reducer 
+it will accept two parameter 
+one is old state and other is action 
+
+and will return the object of state [most important]
+
+
+we will create one .js file 
+
+const redux = require('redux')
+
+const counterReducer = (state = {counter : 0}, action ) => {
+    return { counter : state.counter + 1 }
+}
+
+const store = redux.createStore(counterReducer);
+
+
+
+const counterSubscriber = () => {
+    const latestState = store.getState()
+    console.log(latestState);
+}
+
+store.subscribe(counterSubscriber)
+
+store.dispatch({type : ""})
+
+
