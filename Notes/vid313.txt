@@ -1,0 +1,4 @@
+so the thing is that 
+
+here we have use useDispatch hook 
+and will attach increament and decrement button 
