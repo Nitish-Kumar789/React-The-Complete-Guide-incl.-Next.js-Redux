@@ -1,0 +1,5 @@
+so here we have only one data store 
+
+for that reason 
+we will wrap the app component with provider and put store there as props 
+so that it will be available to all component 
