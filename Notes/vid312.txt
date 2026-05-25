@@ -1,0 +1,6 @@
+so the thing is that 
+
+here we will be using useSelector for a particular component
+
+and the best part is that 
+whenever data chagnes that component will be re-executed 
