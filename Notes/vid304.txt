@@ -1,0 +1,3 @@
+React context has few disadvantages 
+01. it may be nested structure for enterprise level solution 
+02. if frequent data change, then this is not the great solution performance lag may be the issue 
