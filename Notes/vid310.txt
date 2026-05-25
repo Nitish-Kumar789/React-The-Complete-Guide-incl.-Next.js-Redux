@@ -1,0 +1,7 @@
+So the thing is that 
+here we will create on stor folder inside that we will be having index.js 
+
+here we will write code for reducer and data store 
+and then we will export that 
+
+and we will be have seperate files for subscribers 
