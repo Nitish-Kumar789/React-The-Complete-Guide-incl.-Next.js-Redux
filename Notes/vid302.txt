@@ -1,0 +1,8 @@
+ Module Introduction
+
+ so what is Redux 
+ managing app wide state with reduc 
+
+ what is redu and why woulld you use it?
+ Redux Basica nd using redux with React 
+ Working with Redux Toolkit 
