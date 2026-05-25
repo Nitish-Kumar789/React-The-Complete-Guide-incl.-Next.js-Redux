@@ -1,0 +1,10 @@
+In Redux: 
+We have one central data store 
+and there will be multiple components connected with that 
+all components will be subscribed with that cds 
+
+and most important thing is that 
+components is not direcetly update the cds, instead they will dispatch some action and that action will be executed by reducer function on data store 
+
+
+data == state
