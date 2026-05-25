@@ -1,0 +1,8 @@
+bottomline is
+every subscriber will be attached to data store 
+
+if any changes is happening in data store
+then all subscriber will get the latest value 
+
+
+reducer will be passed as an argument to data store 
