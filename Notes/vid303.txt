@@ -1,0 +1,11 @@
+So Here thing is that 
+using state we can change data of the componet 
+and that will affect the UI 
+
+Here we have three types of state: 
+01. Local state - for single component
+02. Cross componet State - for two or three component
+03. App Wide State - across all component 
+
+------------------
+if we already have useContext then what is the use of Redux 
