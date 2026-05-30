@@ -1,0 +1,13 @@
+so here are few things
+for now, firebase is a dumb database because we don't have any logic there
+
+we can add functionality using function button 
+
+few things: 
+
+for now, firebase store will store data as it is sent to server
+
+so all tranfomration logic will be done on frontend side 
+
+so frontend will be heavy coded 
+
