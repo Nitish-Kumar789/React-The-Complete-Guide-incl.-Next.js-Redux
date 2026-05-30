@@ -1,0 +1,13 @@
+so the thing is that 
+here we wiil be having 
+slice 
+that is very convient 
+
+here inside creteSlice({})
+
+
+we will be having all state variable and all function 
+
+here we don't have to putcheck for running the function 
+only by function name 
+c/s block of code will be executed 
