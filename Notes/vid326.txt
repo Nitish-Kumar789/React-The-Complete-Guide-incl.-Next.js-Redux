@@ -1,0 +1,5 @@
+Here we will using Redux Deep Dive 
+
+-> Handling Async task with Redux
+-> Where to put your code 
+-> The Redux DevTools
