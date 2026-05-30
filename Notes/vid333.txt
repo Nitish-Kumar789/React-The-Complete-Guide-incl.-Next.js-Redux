@@ -1,0 +1,7 @@
+Where To Put Our Logic
+
+=> if we having state inside reducer don't update at any other place 
+instead make a new copy and do all transformation and then pass then transformation to reducer 
+
+=> if we have sync code then better preferred reducer 
+=> if we have async code then better preferred create actions 
