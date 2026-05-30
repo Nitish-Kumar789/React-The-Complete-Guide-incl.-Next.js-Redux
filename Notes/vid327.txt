@@ -1,0 +1,7 @@
+so the main issue 
+is that reducer  must be pure, side effect free, sync function 
+
+but for https requrest that not the case 
+
+then we can use useEffect or inside the action 
+creators 
