@@ -1,0 +1,7 @@
+So the thing is that 
+we can export all action and then by importing 
+using object property 
+we can use that 
+
+if we are passing something 
+that will treated as payload
