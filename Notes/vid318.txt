@@ -1,0 +1,10 @@
+so here we have few issue 
+like what if naming convenction is not followed properly 
+and let suppose mainy deveoper are working on same application 
+then there can be chances of sane name clash 
+
+and another issue is that using same name 
+
+other issue is having nested strcture 
+
+all can be solved using Redux toolkit
