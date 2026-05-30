@@ -1,0 +1,8 @@
+Working with Multiple Slices
+
+so the thing is that 
+we can have more that one createSlice 
+but only one configureStore
+
+in createSlice 
+we have object of name, initial state, and all functions
