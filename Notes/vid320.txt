@@ -1,0 +1,5 @@
+so the thing is that 
+using configureStore 
+we will have only one reducer 
+if we have multiple reducer then we can craete object of map 
+
