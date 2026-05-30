@@ -1,0 +1,10 @@
+ Using useEffect with Redux
+
+ using useSelector we can get hold of redux store anywhere in the code 
+
+ and using useEffect we will do api call and whenever state change 
+ useSelector will be re-evaluated and we will get the latest cart 
+ and once cart change we will execute the https request
+
+
+ so first we will update the redux store and later update the firebase - database 
