@@ -1,0 +1,17 @@
+so here what we want 
+whenever we click on add to cart button 
+then backend should get that cart 
+and whenever page refreshed the cart should load 
+
+for this we will be using firebase 
+we can do same things using node.js 
+but the thing is that 
+here we have different focus 
+for firebase, this is no code setup 
+
+but other thing is that inside redux - reducers 
+we cann't write async code 
+for that we have two different option 
+
+01. using useEffect 
+02. using action creators 
