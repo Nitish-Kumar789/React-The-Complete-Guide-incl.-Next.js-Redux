@@ -1,0 +1,7 @@
+Splitting Our Code
+
+------------------
+
+So here we will be doing Splitting of code 
+
+we will put all slices in store folder 
