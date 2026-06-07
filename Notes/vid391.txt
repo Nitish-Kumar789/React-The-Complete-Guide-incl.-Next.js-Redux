@@ -1,0 +1,13 @@
+here we will show error if there is anytype of error while signup or log in 
+and will also change the text of button when we are click on save button 
+
+using useActionData()
+
+
+if we have some object and we have to convert into array with values only then 
+we can do sth like 
+
+Object.values(data.error) => convert object with value as element of array 
+
+
+useNavigation() is used to check what is the current status of the form 
