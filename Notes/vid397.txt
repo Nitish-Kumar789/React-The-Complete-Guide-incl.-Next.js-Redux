@@ -1,0 +1,7 @@
+So the thing is that 
+we have to for some route 
+we will add protection 
+otherwise it will function unexpectedly 
+
+so what we can do here 
+if there is no token then simply redirect to authentication page 
