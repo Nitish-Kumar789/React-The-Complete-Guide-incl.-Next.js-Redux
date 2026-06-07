@@ -1,0 +1,8 @@
+what if let suppose 
+if user refreshes the page after every 10 min in that case 
+
+token will never expire
+
+so what we can do while generating token only we can set some time 
+
+and we can do calculation from that only 
