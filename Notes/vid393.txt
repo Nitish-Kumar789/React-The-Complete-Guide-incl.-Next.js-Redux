@@ -1,0 +1,9 @@
+Attaching Auth Tokens to Outgoing Requests
+
+
+Here will send back token in response and that value we will save in local storage 
+
+first we wil fetch that value in js file that has all functionalities available for broswer and 
+later we will send this token in header file 
+
+"Authorization" : "Bearer " + token 
