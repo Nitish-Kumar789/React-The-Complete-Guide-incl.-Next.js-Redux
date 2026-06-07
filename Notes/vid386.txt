@@ -1,0 +1,6 @@
+Basically here we will check authentication system 
+
+will check how to add authentication
+How to implement user authentication
+and will also check persistence - will see still user is log in or not 
+auto logout - will check if we can log out user if he is inactive 
