@@ -1,0 +1,2 @@
+Basically here we will add one different section for authentication on home page itself there will be one section 
+with email and password entry 
