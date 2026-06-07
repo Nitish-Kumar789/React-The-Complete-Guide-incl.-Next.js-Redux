@@ -1,0 +1,31 @@
+Updating the UI Based on Auth Status
+
+so here we will Updating the UI based on if token is available or not 
+
+if yes then we can see corresponding element
+
+if not then we can rest element 
+
+in app.js 
+
+we can create one createBroswerRouter()
+
+in that we can set id and put that loader there 
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+]);
+
+
+
+this is central place to create all route in the application 
+
+here we have path and element as key 
