@@ -1,0 +1,18 @@
+Important: loader()s must return null or any other value
+Important: In the next lecture, I set up a route loader that doesn't return a value under certain circumstances.
+
+You should make sure that you do add an extra return null statement in all if statement branches where nothing would be returned otherwise to avoid errors.
+
+To be precise, in the checkAuthLoader() function that will be added in the next lecture, you should add return null after the if statment:
+
+export function checkAuthLoader() {
+  // this function will be added in the next lecture
+  // make sure it looks like this in the end
+  const token = getAuthToken();
+  
+  if (!token) {
+    return redirect('/auth');
+  }
+ 
+  return null; // this is missing in the next lecture video and should be added by you
+}
