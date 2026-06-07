@@ -1,0 +1,16 @@
+there are few things that need to be highlighted 
+
+let suppose, token are expirining in one hour 
+
+we can set our own timer 
+
+so in the .js file 
+we can simply use useEffect 
+
+and that will execute in two case only 
+
+01. on Logout 
+02. on timeout 
+
+note: in useEffect, time should be in ms 
+
