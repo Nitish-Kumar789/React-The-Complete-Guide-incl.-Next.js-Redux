@@ -1,0 +1,18 @@
+theere are multiple routes that need authentication 
+
+for that we have two solution: 
+
+
+01. server-side sessions
+In this method, frontend and backend are tightly coupled 
+and all information are stored on server 
+
+02. authentication tokens 
+
+in this method, server will generate string tokens
+that will be stored on frontend
+
+and whenever request goes to backend, backend can validate if its genuine user or not 
+
+
+
