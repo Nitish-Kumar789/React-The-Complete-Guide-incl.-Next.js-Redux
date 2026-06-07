@@ -1,0 +1,9 @@
+Adding User Logout
+
+Now we are moving to any page without any information 
+but that shouldn't be the case 
+here we have to log out if required by just clicking on the button 
+
+the simple thing that we can do is that we can create one js file and then delete the token thats it 
+so that function will delete the token from local storage and 
+redirect to the homepage that it 
