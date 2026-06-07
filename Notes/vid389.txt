@@ -1,0 +1,11 @@
+so Here we will use: 
+Link tag to set to different params 
+
+and ? ---
+
+that is query params or search params 
+
+using useSearchParams()
+we can get to know the current status and  we can set the value of isLogIn variable 
+and later we can change the mode as required 
+
