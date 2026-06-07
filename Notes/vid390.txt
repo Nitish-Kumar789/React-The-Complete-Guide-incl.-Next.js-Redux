@@ -1,0 +1,26 @@
+Here we will check 
+take email and passwords and all details here 
+and will sent to server and 
+and also do re-direction 
+-------------
+
+Here we will create one method action in Authentication.js file 
+
+useSerachParams() cann't be used here because this is normal function 
+
+
+most importantthis will be receiving request 
+that will be having all information 
+
+
+request.formData() golden things 
+
+
+for query params 
+
+new URL(request.url).serachParams; 
+
+
+we will get 4 series error, if there is any error from client side 
+like if client want to create new users with same email 
+id passwords ay be different 
