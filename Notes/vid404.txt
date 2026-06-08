@@ -1,0 +1,18 @@
+Here we will add concept of lazy loading 
+- suspense 
+- fallback 
+- import().then()
+- lazy()
+
+
+Basically here we will import the required import dynamically 
+
+import will give us promise so to resolve that we will use then keywork
+
+loader : () => import("./relative path").then(module => module.loader())
+
+
+if we are dynamically importing components outside function 
+then we have to to wrap it around lazy keyword 
+
+and component will be wrapped around suspense keyword and use fallback condition 
