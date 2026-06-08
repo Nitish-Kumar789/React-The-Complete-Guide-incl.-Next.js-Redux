@@ -1,0 +1,7 @@
+-npm run build 
+
+There might be the case there will be multiple part of the code 
+that is transformed on the browser 
+
+using build, code is transformed in some unreadable format 
+bundled pack 
