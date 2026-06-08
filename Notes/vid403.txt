@@ -1,0 +1,12 @@
+For optimisation, we can do multiple things: 
+- React Memo 
+- Lazy loading 
+
+simple understanding is that before a web page loads 
+all components loads first then any other action happens
+
+
+so what we can do here is that 
+instead of importing all files all at once, we will only import required import 
+
+this will optimise the code 
