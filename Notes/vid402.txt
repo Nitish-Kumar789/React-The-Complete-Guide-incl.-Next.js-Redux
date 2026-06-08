@@ -1,0 +1,7 @@
+Here we will learn about deployment steps: 
+
+01. Test code
+02. Optimise code 
+03. Build App - bundled package 
+04. Upload App 
+05. Configure Serve 
