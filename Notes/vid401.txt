@@ -1,0 +1,5 @@
+Here we will move code from development to production 
+
+here we will see how to deploy our code 
+- deployment and pitfalls 
+- server side routing vs client side routing 
