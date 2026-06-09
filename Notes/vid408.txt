@@ -1,0 +1,8 @@
+so here we will be learning about the tanstack query 
+
+earlier we refer it as react query 
+that will be used to connect frontend with the backend 
+
+there are few things 
+
+earlier we used to use useeffect and other things 
