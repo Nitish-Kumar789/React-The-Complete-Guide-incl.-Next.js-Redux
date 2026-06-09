@@ -1,0 +1,7 @@
+so using tanstack 
+what we are doingn here is that 
+we won't be using useState, useEffect and fetch method 
+
+instead we will write another way 
+
+here we will use cahcing to get updated data 
