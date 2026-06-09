@@ -1,0 +1,3 @@
+so basically here we will do the setup 
+here we have frontend as well as backend code 
+and after that we have to do setup 
